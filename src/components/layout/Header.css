@@ -1,0 +1,126 @@
+header { z-index: 100; }
+
+/* Header background uses your theme var */
+.site-header {
+  background-color: var(--color-white);
+}
+
+/* Logo rotation on hover */
+#logo-img { transition: transform 0.3s ease-in-out; }
+#logo-img:hover { transform: rotate(-45deg); }
+
+/* Skip link (centered) */
+.skip-to-content-link {
+  background: var(--color-accent);
+  height: 30px;
+  left: 50%;
+  padding: 8px;
+  position: absolute;
+  transform: translate(-50%, -100%);
+  transition: transform 0.3s;
+  z-index: 1000;
+}
+.skip-to-content-link:focus { transform: translate(-50%, 0%); }
+
+/* Nav link look (colour + font-size from variables) */
+.nav-link {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+/* Contact block */
+.contact-email,
+.contact-phone {
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+}
+
+/* Mobile trigger (accent pill) */
+.mobile-trigger {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  height: 3rem;
+  padding: 0 0 0 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .2s ease;
+}
+.mobile-trigger:hover { transform: scale(0.98); }
+.mobile-trigger:focus-visible {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: 2px;
+}
+
+/* === Animation timing (keep in sync with Header.jsx ANIM_MS) === */
+:root {
+  --menu-anim-ms: 260ms;
+}
+
+/* Backdrop + panel base states */
+.overlay-root { pointer-events: none; } /* parent is inert; children handle events */
+.overlay-backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity var(--menu-anim-ms) ease;
+}
+.overlay-panel {
+  background: var(--color-primary);
+  color: var(--color-white);
+  opacity: 0;
+  transform: translateY(12px); /* subtle slide */
+  transition:
+    opacity var(--menu-anim-ms) ease,
+    transform var(--menu-anim-ms) cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Open state */
+.overlay-root[data-open="true"] { pointer-events: auto; }
+.overlay-root[data-open="true"] .overlay-backdrop { opacity: 1; }
+.overlay-root[data-open="true"] .overlay-panel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Close button color */
+.overlay-close { color: rgba(255, 255, 255, 0.8); }
+.overlay-close:hover { color: var(--color-white); }
+
+/* Mobile overlay nav link style */
+.mobile-link {
+  display: block;
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  font-size: var(--font-size-xl);
+}
+
+/* Small (sm) — 640px (40rem) and up */
+@media (min-width: 40rem) {
+  /* your overrides here */
+}
+
+/* Medium (md) — 768px (48rem) and up */
+@media (min-width: 48rem) {
+  /* your overrides here */
+}
+
+/* Large (lg) — 1024px (64rem) and up */
+@media (min-width: 64rem) {
+  /* your overrides here */
+}
+
+/* Extra Large (xl) — 1280px (80rem) and up */
+@media (min-width: 80rem) {
+  /* your overrides here */
+}
+
+/* 2X Large (2xl) — 1536px (96rem) and up */
+@media (min-width: 96rem) {
+  /* your overrides here */
+}

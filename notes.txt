@@ -1,0 +1,279 @@
+I'm creating this website in React, Vite and Tailwind CSS. Here is style.css:
+
+`@import "tailwindcss";
+
+:root {
+  /* COLOURS */
+  --color-text: #54575dd6;
+  --color-bg: #f6f6f6;
+  --color-primary: #262729;
+  --color-accent: #d3caff;
+  --color-accent-light: #e9e5ff;
+  --color-white: #ffffff;
+  --color-highlight: #4122D1;
+
+/* TYPOGRAPHY */
+--font-body: "Plus Jakarta Sans", sans-serif;
+--font-size-base: 1rem;         /* 16px */
+--font-size-sm: 0.875rem;       /* 14px */
+--font-size-lg: 1.125rem;       /* 18px */
+--font-size-xl: 1.625rem;        /* 26px */
+--font-weight-regular: 400;
+--font-weight-medium: 500;
+--font-weight-bold: 600;
+
+/* HEADINGS */
+--font-size-h1: 6.5rem;      
+--font-size-h2: 5.5rem; 
+--font-size-h3: 1.8rem;
+--font-size-h4: 1.5rem;
+--font-size-h5: 1.125rem;
+--font-size-h6: 1rem;
+
+
+  --line-height-tight: 1.1em;
+  --line-height-relaxed: 1.4em;
+
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 2px;
+  --letter-spacing-negative: -0.03em;
+
+  /* LAYOUT */
+  --max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY + GLOBAL TEXT */
+body {
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--color-bg);
+}
+
+.text-xl-custom {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+
+
+/* HEADINGS */
+h1 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-negative);
+}
+
+h2 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.045em;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-negative);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.04em;
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-regular);
+}
+
+/* BUTTONS */
+.button,
+button,
+input[type="button"],
+input[type="submit"] {
+  min-height: 3em;
+  display: inline-flex;               /* flexbox for centering */
+  align-items: center;                /* vertical centering */
+  justify-content: center;            /* horizontal centering */
+  gap: 0.5rem;                         /* space if icon/arrow is present */
+  
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  width: fit-content;
+  padding: 5px 22px;
+  border: 1px solid var(--color-primary);
+  border-radius: 50px;
+  cursor: pointer;
+  transform-origin: bottom right;
+  transition: background 0.3s, color 0.3s, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.button:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  transform: scale(0.95);
+  text-decoration: none;
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+/* LINKS */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-highlight);
+  text-decoration: none;
+}
+
+/* FORM ELEMENTS */
+input[type="text"],
+textarea {
+  border: 1px solid var(--color-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  padding: 8px;
+  color: var(--color-primary);
+  border-radius: 0;
+  width: 100%;
+}
+
+/* LABELS */
+label {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+}
+
+/* CONTAINER */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* RESPONSIVE FONT SIZES */
+@media (max-width: 1024px) {
+  :root {
+    --font-size-h1: 65px;
+    --font-size-h2: 50px;
+    --font-size-h3: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --font-size-base: 14px;
+    --font-size-h1: 50px;
+    --font-size-h2: 42px;
+    --font-size-h3: 22px;
+  }
+}
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Apply consistent horizontal padding */
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Global focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-highlight); 
+  outline-offset: 2px;
+}
+
+`
+
+Here is the tree structure so far of my src folder:
+
+src/
+┣ assets/
+┃ ┗ images/
+┃   ┣ logos/
+┃ ┃ ┃ ┣ e-logo-dark-sm.png
+┃ ┃ ┃ ┗ e-logo-dark.png
+┃   ┗ ellie.png
+┣ components/
+┃ ┣ layout/
+┃ ┃ ┣ Footer.jsx
+┃ ┃ ┣ Header.css
+┃ ┃ ┗ Header.jsx
+┃ ┣ pages/
+┃ ┣ sections/
+┃ ┃ ┣ AboutSection.css
+┃ ┃ ┣ AboutSection.jsx
+┃ ┃ ┣ HeroSection.css
+┃ ┃ ┣ HeroSection.jsx
+┃ ┃ ┣ ProjectsSection.css
+┃ ┃ ┣ ProjectsSection.jsx
+┃ ┃ ┣ SkillsSection.css
+┃ ┃ ┗ SkillsSection.jsx
+┃ ┣ ui/
+┃ ┃ ┣ ActionButton.jsx
+┃ ┃ ┣ LinkButton.jsx
+┃ ┃ ┣ SingleIconList.css
+┃ ┃ ┣ SingleIconList.jsx
+┃ ┃ ┣ SkillCard.jsx
+┃ ┃ ┣ SkillsSection.css
+┃ ┃ ┗ Spacer.jsx
+┃ ┣ ContactForm.jsx
+┃ ┣ List.jsx
+┃ ┣ Skills.jsx
+┃ ┗ StyleGuide.jsx
+┣ data/
+┃ ┣ projectsData.js
+┃ ┗ skillsData.js
+┣ i18n/
+┃ ┣ en.json
+┃ ┣ fr.json
+┃ ┗ i18n.js
+┣ pages/
+┣ App.css
+┣ App.jsx
+┣ index.css
+┣ main.jsx
+┗ style.css
+
+I am basing this project off a WordPress site I have already created. I want to recreate the site in React and Vite. 
+
+

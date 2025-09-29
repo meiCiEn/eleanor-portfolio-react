@@ -1,0 +1,366 @@
+@import "tailwindcss";
+
+:root {
+  /* COLOURS */
+  --color-text: #54575dd6;
+  --color-text-light: #bebebf;
+  --color-bg: #f6f6f6;
+  --color-primary: #262729;
+  --color-accent: #d3caff;
+  --color-accent-light: #e9e5ff;
+  --color-white: #ffffff;
+  --color-highlight: #4122D1;
+
+  /* TYPOGRAPHY */
+  --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-size-base: 1rem;
+  /* 16px */
+  --font-size-xs: 0.75rem;
+  /* 12px */
+  --font-size-sm: 0.875rem;
+  /* 14px */
+  --font-size-lg: 1.125rem;
+  /* 18px */
+  --font-size-xl: 1.625rem;
+  /* 26px */
+  --font-weight-thin: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+
+  /* HEADINGS */
+  --font-size-h1: 3rem;
+  --font-size-h2: 2.5rem;
+  /* 50px */
+  --font-size-h3: 1.8rem;
+  --font-size-h4: 1.5rem;
+  --font-size-h5: 1.125rem;
+  --font-size-h6: 1rem;
+
+
+  --line-height-tight: 1.1em;
+  --line-height-relaxed: 1.4em;
+
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 2px;
+  --letter-spacing-negative: -0.03em;
+
+  /* LAYOUT */
+  --max-width-wide: 1400px;
+  --max-width-regular: 1290px;
+
+  /* BORDER RADIUS */
+  --radius-none: 0;
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 50px;
+  /* for pill-shaped buttons */
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* BODY + GLOBAL TEXT */
+body {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--color-bg);
+}
+
+.text-xl-custom {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  letter-spacing: var(--letter-spacing-negative);
+}
+
+.text-lg-custom {
+  font-size: var(--font-size-lg);
+}
+
+
+/* HEADINGS */
+h1 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-negative);
+}
+
+h2 {
+  color: var(--color-primary);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.045em;
+  word-spacing: 0.2rem;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-negative);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.04em;
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-regular);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* BUTTONS */
+.button,
+input[type="button"],
+input[type="submit"] {
+  min-height: 3em;
+  display: inline-flex;
+  /* flexbox for centering */
+  align-items: center;
+  /* vertical centering */
+  justify-content: center;
+  /* horizontal centering */
+  gap: 0.5rem;
+  /* space if icon/arrow is present */
+
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  width: fit-content;
+  padding: 5px 20px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transform-origin: bottom right;
+  transition: background 0.3s, color 0.3s, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  transform: scale(0.95);
+  text-decoration: none;
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.button-inverted:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+/* LINKS */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-highlight);
+  text-decoration: none;
+}
+
+/* FORM ELEMENTS */
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1px solid var(--color-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  padding: 1rem 1.5rem;
+  color: var(--color-primary);
+  border-radius: var(--radius-sm);
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+/* LABELS */
+label {
+  display: block;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing-negative);
+  word-spacing: 0.2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+/* CONTAINERS */
+.container {
+  max-width: var(--max-width-regular);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container-wide {
+  width: calc(100% - 40px);
+  margin-inline: auto;
+}
+
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Global focus ring for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--color-highlight);
+  outline-offset: 2px;
+}
+
+/* === THEME COLOUR UTILITIES === */
+.color-text {
+  color: var(--color-text);
+}
+
+.color-text-light {
+  color: var(--color-text-light);
+}
+
+.color-bg {
+  color: var(--color-bg);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-accent {
+  color: var(--color-accent);
+}
+
+.color-accent-light {
+  color: var(--color-accent-light);
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.color-highlight {
+  color: var(--color-highlight);
+}
+
+/* === RESPONSIVE TYPOGRAPHY + CONTAINERS (Tailwind breakpoints, min-width) === */
+
+@media (min-width: 30rem) {
+    :root {
+  --font-size-h1: 4rem;
+  --font-size-h2: 3.125rem;
+    /* 22px */
+  }
+
+
+}
+
+/* sm — 640px (40rem) and up */
+@media (min-width: 40rem) {
+
+  /* Container-wide gutters grow from 40px → 60px */
+  .container-wide {
+    width: calc(100% - 60px);
+  }
+
+  :root {
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-h1: 5rem;
+    --font-size-h2: 4rem;
+    --font-size-h3: 1.375rem;
+    /* 22px */
+  }
+
+  .button,
+  input[type="button"],
+  input[type="submit"] {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* md — 768px (48rem) and up */
+@media (min-width: 48rem) {
+
+  /* Keep 60px gutters at md */
+  .container-wide {
+    width: calc(100% - 60px);
+  }
+
+  /* Typography (rem) */
+
+}
+
+/* lg — 1024px (64rem) and up */
+@media (min-width: 64rem) {
+  .container-wide {
+    width: calc(100% - 120px);
+  }
+
+    .button,
+  input[type="button"],
+  input[type="submit"] {
+    padding: 5px 22px;
+  }
+
+  :root {
+    --font-size-h1: 6.5rem;
+    /* ~104px */
+    --font-size-h2: 5.5rem;
+    /* ~88px */
+    --font-size-h3: 1.8rem;
+    /* ~28.8px */
+  }
+}
+
+/* xl — 1280px (80rem) and up */
+@media (min-width: 80rem) {
+
+  /* Same gutters as lg */
+  .container-wide {
+    width: calc(100% - 120px);
+  }
+
+}
+
+/* 2xl — 1536px (96rem) and up */
+@media (min-width: 96rem) {
+  .container-wide {
+    width: calc(100% - 120px);
+    max-width: var(--max-width-wide);
+    /* 1400px cap from your :root */
+  }
+
+
+}

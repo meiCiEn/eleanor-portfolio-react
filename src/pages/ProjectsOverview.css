@@ -1,0 +1,26 @@
+/* Tailwind CSS breakpoints (min-width) */
+
+/* Small (sm) — 640px (40rem) and up */
+@media (min-width: 40rem) {
+  /* your overrides here */
+}
+
+/* Medium (md) — 768px (48rem) and up */
+@media (min-width: 48rem) {
+  /* your overrides here */
+}
+
+/* Large (lg) — 1024px (64rem) and up */
+@media (min-width: 64rem) {
+  /* your overrides here */
+}
+
+/* Extra Large (xl) — 1280px (80rem) and up */
+@media (min-width: 80rem) {
+  /* your overrides here */
+}
+
+/* 2X Large (2xl) — 1536px (96rem) and up */
+@media (min-width: 96rem) {
+  /* your overrides here */
+}

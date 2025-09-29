@@ -1,0 +1,77 @@
+/* Rows in the projects list */
+
+.project-row {
+    padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.project-row:not(:last-child) {
+  border-bottom: 1px solid var(--color-primary);
+}
+
+/* Link to each project */
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  transition: color 0.2s ease, transform 0.25s ease;
+  letter-spacing: var(--letter-spacing-negative);
+}
+
+.project-link:hover {
+  color: var(--color-highlight);
+  transform: skewX(-5deg); /* slight tilt */
+}
+
+/* External link icon */
+.project-link .icon-link {
+  width: 1.2em; /* em so it scales to text */
+  height: 1.2em;
+  color: var(--color-text);
+  transition: color 0.2s ease;
+  margin-bottom: -0.1em;
+}
+
+.project-link:hover .icon-link {
+  color: var(--color-highlight);
+}
+
+/* Year label */
+.project-year {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+}
+
+/* Tailwind CSS breakpoints (min-width) */
+
+/* Small (sm) — 640px (40rem) and up */
+@media (min-width: 40rem) {
+  .project-link {
+  font-size: var(--font-size-xl);
+}
+}
+
+/* Medium (md) — 768px (48rem) and up */
+@media (min-width: 48rem) {
+  .project-row {
+  padding-bottom: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+}
+
+/* Large (lg) — 1024px (64rem) and up */
+@media (min-width: 64rem) {
+  /* your overrides here */
+}
+
+/* Extra Large (xl) — 1280px (80rem) and up */
+@media (min-width: 80rem) {
+  /* your overrides here */
+}
+
+/* 2X Large (2xl) — 1536px (96rem) and up */
+@media (min-width: 96rem) {
+  /* your overrides here */
+}

@@ -1,0 +1,180 @@
+.contact-panel {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.contact-panel label {
+    color: var(--color-text-light);
+    text-transform: uppercase;
+}
+
+/* Social links */
+/* Only affects social icons inside the contact panel */
+.contact-panel .hero-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.7rem;   /* circle size */
+  height: 2.7rem;
+  border-radius: 50%;
+  border: 1px solid var(--color-text);
+  color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.contact-panel .hero-link:hover {
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: scale(0.9); /* slight shrink */
+}
+
+
+.contact-heading {
+  color: var(--color-white);
+}
+
+.contact-label {
+  opacity: 0.8;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+}
+
+.contact-link {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: var(--color-accent);
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  border-radius: 9999px;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.contact-border {
+  border-color: var(--color-text);
+}
+
+/* Form Labels */
+.contact-form label {
+  display: block;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  letter-spacing: var(--letter-spacing-negative);
+  margin-bottom: 0.3rem;
+}
+
+.contact-form label.required span {
+  color: var(--color-accent);
+}
+
+/* Inputs & textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  border: 1px solid var(--color-primary);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  padding: 8px;
+  color: var(--color-primary);
+  border-radius: var(--radius-sm);
+  width: 100%;
+}
+
+/* Consent checkbox label */
+.contact-form .consent-label {
+  font-weight: var(--font-weight-regular);
+}
+
+/* Status message */
+.contact-form .status-message {
+  font-size: var(--font-size-sm);
+  margin-top: 0.5rem;
+}
+
+.contact-form .status-message.success {
+  color: lightgreen;
+}
+
+.contact-form .status-message.error {
+  color: var(--color-highlight);
+}
+
+/* Privacy note */
+.contact-form .privacy-note {
+  font-size: var(--font-size-sm);
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+.contact-section {
+  position: relative;
+}
+
+.contact-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  height: 30rem;
+  overflow: hidden;
+}
+
+.contact-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Lift the panel above the image and make it overlap */
+.contact-panel {
+  position: relative;
+  z-index: 1;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+}
+
+/* Tailwind CSS breakpoints (min-width) */
+
+/* Small (sm) — 640px (40rem) and up */
+@media (min-width: 40rem) {
+  /* your overrides here */
+}
+
+/* Medium (md) — 768px (48rem) and up */
+@media (min-width: 48rem) {
+  /* your overrides here */
+}
+
+/* Large (lg) — 1024px (64rem) and up */
+@media (min-width: 64rem) {
+  /* your overrides here */
+}
+
+/* Extra Large (xl) — 1280px (80rem) and up */
+@media (min-width: 80rem) {
+  /* your overrides here */
+}
+
+/* 2X Large (2xl) — 1536px (96rem) and up */
+@media (min-width: 96rem) {
+  /* your overrides here */
+}
+

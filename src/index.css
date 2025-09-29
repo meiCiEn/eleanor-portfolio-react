@@ -1,0 +1,61 @@
+/* === index.css (minimal reset) === */
+
+/* Reset box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Ensure full-height */
+html, body {
+  height: 100%;
+  min-width: 320px; /* safe minimum for mobile */
+}
+
+/* Body baseline */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove list styles on ul/ol */
+ul, ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Remove default button styles */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+/* Anchor defaults */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images scale down */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}

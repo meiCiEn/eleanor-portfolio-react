@@ -1,0 +1,77 @@
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  padding: 5rem 1rem 1.875rem 1rem;
+}
+
+.footer-heading {
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-negative);
+  font-size: var(--font-size-h4);
+  margin-bottom: 1.5rem;
+}
+
+.footer-links, .footer-links a {
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+  transition: color 0.3s;
+}
+
+.footer-links:hover, .footer-links a:hover {
+  color: var(--color-white);
+}
+
+.footer-label {
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+}
+
+.footer-divider {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Logo rotation on hover */
+#logo-img-footer {
+  transition: transform 0.3s ease-in-out;
+}
+
+#logo-img-footer:hover {
+  transform: rotate(-45deg);
+}
+
+/* Tailwind CSS breakpoints (min-width) */
+
+/* Small (sm) — 640px (40rem) and up */
+@media (min-width: 40rem) {
+  /* your overrides here */
+}
+
+/* Medium (md) — 768px (48rem) and up */
+@media (min-width: 48rem) {
+    .footer {
+      padding: 5rem 2rem 1.875rem 2rem;
+  }
+}
+
+/* Large (lg) — 1024px (64rem) and up */
+@media (min-width: 64rem) {
+  .footer {
+      padding: 5rem 3.125rem 1.875rem 3.125rem;
+  }
+  
+}
+
+/* Extra Large (xl) — 1280px (80rem) and up */
+@media (min-width: 80rem) {
+  /* your overrides here */
+}
+
+/* 2X Large (2xl) — 1536px (96rem) and up */
+@media (min-width: 96rem) {
+  /* your overrides here */
+}

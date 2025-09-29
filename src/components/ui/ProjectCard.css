@@ -1,0 +1,94 @@
+.project-image-wrap {
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+}
+
+.project-image-link {
+  display: block;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top; 
+  filter: grayscale(100%);
+  transition: filter 300ms ease-in-out;
+}
+
+
+.project-image-link:hover .project-image,
+.project-image-link:focus-visible .project-image {
+  filter: grayscale(0%);
+}
+
+
+.project-type {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  color: var(--color-text);
+}
+
+.project-title {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-negative);
+}
+
+.project-summary {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+.project-summary__link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: var(--color-primary);
+}
+.project-summary__link:hover,
+.project-summary__link:focus {
+  color: var(--color-highlight);
+  outline: none;
+}
+
+.project-button {
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  font-size: var(--font-size-sm);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+/* Tailwind CSS breakpoints (min-width) */
+
+/* Small (sm) — 640px (40rem) and up */
+@media (min-width: 40rem) {
+  /* your overrides here */
+}
+
+/* Medium (md) — 768px (48rem) and up */
+@media (min-width: 48rem) {
+  /* your overrides here */
+}
+
+/* Large (lg) — 1024px (64rem) and up */
+@media (min-width: 64rem) {
+  /* your overrides here */
+}
+
+/* Extra Large (xl) — 1280px (80rem) and up */
+@media (min-width: 80rem) {
+  /* your overrides here */
+}
+
+/* 2X Large (2xl) — 1536px (96rem) and up */
+@media (min-width: 96rem) {
+  /* your overrides here */
+}
+

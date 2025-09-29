@@ -1,0 +1,68 @@
+/* Roles list */
+.project-roles {
+  text-transform: uppercase;
+  font-size: var(--font-size-base);
+}
+
+.project-roles li {
+  color: var(--color-primary);
+}
+
+/* Tagline */
+.project-tagline {
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  letter-spacing: var(--letter-spacing-negative);
+}
+
+/* Overview text */
+.project-overview {
+  color: var(--color-text);
+}
+
+/* Section headings (Tech, Year, Overview) */
+.project-subheading {
+  font-size: var(--font-size-h5);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  letter-spacing: var(--letter-spacing-negative);
+  margin-bottom: 0.5rem;
+}
+
+.project-gallery-label {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Tailwind CSS breakpoints (min-width) */
+
+/* Small (sm) — 640px (40rem) and up */
+@media (min-width: 40rem) {
+  .project-tagline {
+
+  font-size: var(--font-size-xl);
+
+}
+}
+
+/* Medium (md) — 768px (48rem) and up */
+@media (min-width: 48rem) {
+  /* your overrides here */
+}
+
+/* Large (lg) — 1024px (64rem) and up */
+@media (min-width: 64rem) {
+  /* your overrides here */
+}
+
+/* Extra Large (xl) — 1280px (80rem) and up */
+@media (min-width: 80rem) {
+  /* your overrides here */
+}
+
+/* 2X Large (2xl) — 1536px (96rem) and up */
+@media (min-width: 96rem) {
+  /* your overrides here */
+}

@@ -1,0 +1,65 @@
+.icon-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+.icon-list-item {
+  display: flex;
+  align-items: center;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.icon-list-icon {
+  margin-right: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.icon-circle {
+  width: 0.75rem;
+  height: 0.75rem;
+  fill: var(--color-primary);
+}
+
+.icon-list-text {
+  color: var(--color-primary);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-normal);
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Tailwind CSS breakpoints (min-width) */
+
+/* Small (sm) — 640px (40rem) and up */
+@media (min-width: 40rem) {
+  /* your overrides here */
+}
+
+/* Medium (md) — 768px (48rem) and up */
+@media (min-width: 48rem) {
+  /* your overrides here */
+}
+
+/* Large (lg) — 1024px (64rem) and up */
+@media (min-width: 64rem) {
+  /* your overrides here */
+}
+
+/* Extra Large (xl) — 1280px (80rem) and up */
+@media (min-width: 80rem) {
+  /* your overrides here */
+}
+
+/* 2X Large (2xl) — 1536px (96rem) and up */
+@media (min-width: 96rem) {
+  /* your overrides here */
+}
+
