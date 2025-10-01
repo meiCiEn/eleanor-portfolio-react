@@ -14,11 +14,13 @@ const SkillsSection = ( { headerHeight } ) =>
             <div className="container">
                 <Spacer size="lg" />
                 <h2 className="text-center">Skills</h2>
-                <div className="flex flex-col md:flex-row justify-center gap-8 mt-10">
+                <ul className="flex flex-col md:flex-row justify-center gap-8 mt-10">
                     { skills.map( ( category ) => (
-                        <SkillCard key={ category.title } { ...category } />
+                        <li key={category.title} className="basis-full grow">
+                            <SkillCard key={ category.title } { ...category } />
+                            </li>
                     ) ) }
-                </div>
+                </ul>
                 <div className="hidden sm:flex justify-center mt-10">
                     <LinkButton
                         href="#projects"
