@@ -7,7 +7,8 @@ import ContactSection from "../components/sections/ContactSection";
 
 export default function Home({ headerHeight }) {
   return (
-    <main>
+    <main tabIndex="-1">
+      <div id="top"></div>
       <HeroSection headerHeight={headerHeight} />
       <AboutSection headerHeight={headerHeight} />
       <SkillsSection headerHeight={headerHeight} />

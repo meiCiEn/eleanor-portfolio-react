@@ -1,4 +1,4 @@
-header { z-index: 100; }
+header { z-index: 40; }
 
 /* Header background uses your theme var */
 .site-header {
@@ -123,4 +123,14 @@ header { z-index: 100; }
 /* 2X Large (2xl) — 1536px (96rem) and up */
 @media (min-width: 96rem) {
   /* your overrides here */
+}
+
+/* reduce motions when people have turned it off in settings */
+@media (prefers-reduced-motion: reduce) {
+  .overlay-backdrop,
+  .overlay-panel,
+  #logo-img {
+    transition: none !important;
+  }
+  #logo-img:hover { transform: none !important; }
 }

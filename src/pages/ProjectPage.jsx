@@ -44,6 +44,7 @@ const ProjectPage = () =>
 
     return (
 
+        <main tabindex="-1">
         <section className="section">
             <div className="container-wide flex justify-between items-center">
                 {/* Mobile: back button */ }
@@ -230,6 +231,7 @@ const ProjectPage = () =>
 
 
         </section>
+        </main>
 
     );
 };

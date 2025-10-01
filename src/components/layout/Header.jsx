@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 export default function Header({ setHeaderHeight }) {
@@ -47,11 +47,11 @@ export default function Header({ setHeaderHeight }) {
     <>
       <a className="skip-to-content-link" href="#main">Skip to content</a>
 
-      <header className="site-header py-4 lg:py-6 w-screen sticky top-0" role="banner" ref={refContainer}>
+      <header className="site-header py-4 lg:py-6 w-screen sticky top-0" ref={refContainer}>
         {/* Desktop (lg+) */}
         <div className="max-w-7xl mx-auto px-8 items-center gap-4 hidden lg:grid [grid-template-columns:1fr_3fr_3fr]">
           <div className="flex justify-start">
-            <Link to="/" className="w-16 h-16" title="Go to homepage">
+            <Link to="/#top" className="w-16 h-16" title="Go to homepage" aria-label="Go to homepage">
               <img
                 src="/src/assets/images/logos/e-logo-dark.png"
                 alt="Eleanor Mears logo"
@@ -63,10 +63,10 @@ export default function Header({ setHeaderHeight }) {
 
           <nav className="flex flex-col space-y-2 text-center" aria-label="Main navigation">
             <ul className="flex space-x-8">
-              <li><Link to="/" className="nav-link">Home</Link></li>
-              <li><Link to="/#about" className="nav-link">About</Link></li>
-              <li><Link to="/#projects" className="nav-link">Projects</Link></li>
-              <li><Link to="/#contact" className="nav-link">Contact</Link></li>
+              <li><NavLink to="/#top" className="nav-link">Home</NavLink></li>
+              <li><NavLink to="/#about" className="nav-link">About</NavLink></li>
+              <li><NavLink to="/#projects" className="nav-link">Projects</NavLink></li>
+              <li><NavLink to="/#contact" className="nav-link">Contact</NavLink></li>
             </ul>
           </nav>
 
@@ -79,7 +79,7 @@ export default function Header({ setHeaderHeight }) {
                 <a href="tel:+32467662544">(+32) 467 66 25 44</a>
               </p>
             </div>
-            <a href="#contact" className="button px-4 py-2 w-fit">LET'S TALK</a>
+            <a href="#contact" className="button px-4 py-2 w-fit uppercase">Let's talk</a>
           </div>
         </div>
 

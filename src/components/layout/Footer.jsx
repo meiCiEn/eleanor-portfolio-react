@@ -1,41 +1,41 @@
 import logo from "../../assets/images/logos/e-logo-light.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
-export default function Footer ()
-{
+export default function Footer() {
     const year = new Date().getFullYear();
 
     return (
         <footer role="contentinfo" className="footer">
-            {/* Top grid */ }
+            {/* Top grid */}
             <div className="container py-16">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
-                    {/* Logo */ }
+                    {/* Logo */}
                     <div className="lg:col-span-2 hidden lg:block">
-                        <a href="#"><img id="logo-img-footer"
-                            src={ logo }
+                        <Link to="/#top"><img id="logo-img-footer"
+                            src={logo}
                             alt="Eleanor Mears logo"
                             className="w-14 h-14 object-contain"
-                        /></a>
+                        /></Link>
                     </div>
 
-                    {/* Sections */ }
-                    <nav className="md:col-span-3 lg:col-span-2" aria-labelledby="footer-sections">
+                    {/* Sections */}
+                    <nav className="md:col-span-3 lg:col-span-2" aria-labelledby="footer-sections" aria-label="Footer: social sections">
                         <h4 id="footer-sections" className="footer-heading">
                             Sections
                         </h4>
-                        <ul className="space-y-3 footer-links">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                        <ul className="footer-links">
+                            <li><Link to="/#top">Home</Link></li>
+                            <li><Link to="/#about">About</Link></li>
+                            <li><Link to="/#projects">Projects</Link></li>
+                            <li><Link to="/#contact">Contact</Link></li>
                         </ul>
                     </nav>
 
-                    {/* Socials */ }
-                    <div className="md:col-span-3 lg:col-span-2">
-                        <h4 className="footer-heading">Socials</h4>
+                    {/* Socials */}
+                    <div className="md:col-span-3 lg:col-span-2" aria-labelledby="footer-socials" aria-label="Footer: social profiles">
+                        <h4 id="footer-socials" className="footer-heading">Socials</h4>
                         <ul className="space-y-4 footer-links">
                             <li>
                                 <a
@@ -45,7 +45,7 @@ export default function Footer ()
                                     className="inline-flex items-center gap-3"
                                     aria-label="Visit Eleanor Mears’s GitHub profile"
                                 >
-                                    <FaGithub className="text-lg" aria-hidden="true" /> GitHub
+                                    <FaGithub className="text-lg" aria-hidden="true" focusable="false" /> GitHub
                                 </a>
                             </li>
                             <li>
@@ -56,27 +56,27 @@ export default function Footer ()
                                     className="inline-flex items-center gap-3"
                                     aria-label="Visit Eleanor Mears’s LinkedIn profile"
                                 >
-                                    <FaLinkedin className="text-lg" aria-hidden="true" /> LinkedIn
+                                    <FaLinkedin className="text-lg" aria-hidden="true" focusable="false" /> LinkedIn
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                {/* Divider */ }
+                {/* Divider */}
                 <div className="footer-divider mt-12" aria-hidden="true" />
 
-                {/* Bottom row */ }
+                {/* Bottom row */}
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-6 text-sm">
-                    <div className="md:col-span-4">
+                    <address className="not-italic md:col-span-4">
                         <p className="footer-label hidden sm:block mb-1">Email</p>
                         <a
                             href="mailto:info@eleanor-mears.com"
-                            className="footer-links flex justify-center sm:justify-start break-all"
+                            className="footer-links flex justify-center sm:justify-start break-words"
                         >
                             info@eleanor-mears.com
                         </a>
-                    </div>
+                    </address>
 
                     <div className="md:col-span-4">
                         <p className="hidden footer-label sm:block mb-1">Phone</p>
@@ -87,7 +87,7 @@ export default function Footer ()
 
                     <div className="md:col-span-4 md:text-right">
                         <p className="footer-label hidden sm:block mb-1">Copyright</p>
-                        <p className="flex justify-center sm:justify-end">© Eleanor Mears { year }</p>
+                        <p className="flex justify-center sm:justify-end">© Eleanor Mears {year}</p>
                     </div>
                 </div>
             </div>
