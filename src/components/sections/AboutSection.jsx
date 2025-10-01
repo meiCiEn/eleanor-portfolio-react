@@ -15,7 +15,10 @@ const AboutSection = ( { headerHeight } ) =>
 
 
         <div className="md:w-1/2 lg:w-2/3 flex flex-col">
-          <div className="flex"><SingleIconList text="About Me" /></div>
+        <h2 id="about-heading" className="sr-only">About me</h2>
+          <div className="flex" aria-hidden="true">
+            <SingleIconList text="About Me" />
+            </div>
           <div className="flex flex-col">
             <p className="mb-4 about-text">
               A trained journalist, I worked for The Guardian, BBC, Deutsche Welle and Politico. In 2021 I completed an intensive full‑time web development course at Interface3 in Brussels. Since then I’ve focused on front‑end development.
@@ -36,6 +39,10 @@ const AboutSection = ( { headerHeight } ) =>
             <img
               src={ portrait }
               alt="Portrait of Eleanor Mears"
+              width="640"
+              height="800" 
+              loading="lazy"
+              decoding="async"
               className="h-auto rounded-md object-cover"
             />
           </div>

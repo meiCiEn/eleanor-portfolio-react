@@ -1,6 +1,7 @@
 .hero-heading {
   color: var(--color-primary);
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 6vw + 2rem, 8rem); /*  font-size: clamp(MINIMUM_SIZE, PREFERRED_VALUE, MAXIMUM_SIZE);  */
+  /* font-size: 4rem; */
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-negative);
@@ -9,7 +10,7 @@
 
 .hero-subheading {
   color: var(--color-highlight);
-  font-size: 3.5rem;
+  font-size: clamp(1.5rem, 5vw + 1rem, 6rem); 
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-tight);
   letter-spacing: -0.045em;
@@ -31,6 +32,7 @@
   color: var(--color-primary);
   text-decoration: none;
   font-family: var(--font-body);
+  min-height: 44px
 }
 
 .hero-link:hover {
@@ -41,52 +43,9 @@
   padding-bottom: 3rem;
 }
 
-/* Tailwind CSS breakpoints (min-width) */
-
-/* Small (sm) — 640px (40rem) and up */
+/* Small (40rem) and up */
 @media (min-width: 40rem) {
-  .hero-heading {
-    font-size: 5rem;
-  }
-
-  .hero-subheading {
-    font-size: 4rem;
-  }
-
   .hero-description {
     font-size: var(--font-size-lg);
   }
 }
-
-/* Medium (md) — 768px (48rem) and up */
-@media (min-width: 48rem) {
-  .hero-heading {
-    font-size: 6rem;
-  }
-
-  .hero-subheading {
-    font-size: 4.5rem;
-  }
-}
-
-/* Large (lg) — 1024px (64rem) and up */
-@media (min-width: 64rem) {
-  .hero-heading {
-    font-size: 8rem;
-  }
-
-  .hero-subheading {
-    font-size: 6rem;
-  }
-}
-
-/* Extra Large (xl) — 1280px (80rem) and up */
-@media (min-width: 80rem) {
-  /* your overrides here */
-}
-
-/* 2X Large (2xl) — 1536px (96rem) and up */
-@media (min-width: 96rem) {
-  /* your overrides here */
-}
-

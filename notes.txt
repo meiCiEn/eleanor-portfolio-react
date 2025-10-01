@@ -22,3 +22,13 @@ Example: a <nav> titled by a visible heading
 
 
 Precedence: if both are present, aria-labelledby wins (it overrides aria-label).
+
+sr-only - Tailwind class hiding elements except on screen readers
+aria-hidden = true - HTML attribute, hides non-interactive content from assistive technology. Not to be used on focussable elements.
+
+CSS's clamp() function is used with font sizes to create fluid, responsive typography that scales between a defined minimum and maximum, preventing text from becoming too small on mobile or too large on desktop. It takes three values: a minimum font size, a preferred dynamic value (like 5vw), and a maximum font size. The browser dynamically selects a value within this range, ensuring the font size is always appropriate for the viewport size. 
+How to Use clamp() for Font Sizes
+The basic syntax for the font-size property with clamp() is:
+font-size: clamp(MINIMUM_SIZE, PREFERRED_VALUE, MAXIMUM_SIZE); 
+
+I use clamp() on the Hero section titles. 

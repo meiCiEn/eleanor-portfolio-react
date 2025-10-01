@@ -2,9 +2,6 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import LinkButton from '../ui/LinkButton';
 import './HeroSection.css';
-import WavyBackground from '../ui/WavyBackground';
-
-
 
 const HeroSection = ({ headerHeight }) => { // Receive headerHeight as a prop
   const heroSectionMinHeight = `calc(100vh - ${headerHeight}px)`;
@@ -17,7 +14,7 @@ const HeroSection = ({ headerHeight }) => { // Receive headerHeight as a prop
            
 
       <div className="container flex flex-col justify-center flex-1">
-        <h1 className="hero-heading" aria-label="Eleanor Mears, front-end developer">Eleanor Mears</h1>
+        <h1 className="hero-heading">Eleanor Mears</h1>
         <h2 className="hero-subheading">Front-End Developer</h2>
         <p className="hero-description mt-6 max-w-4xl pl-0 sm:pl-6 md:pl-12">
           As a <strong>front-end web developer</strong> from the world of journalism, my goal is to create <strong>visually–appealing websites</strong> with accessibility and user experience at the forefront of each design.

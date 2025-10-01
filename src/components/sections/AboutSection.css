@@ -4,6 +4,7 @@
   font-weight: var(--font-weight-medium);
   line-height: 1.4;
   letter-spacing: var(--letter-spacing-negative);
+  word-spacing: 0.1rem;
 }
 
 /* Tailwind CSS breakpoints (min-width) */
