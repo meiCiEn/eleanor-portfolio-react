@@ -44,18 +44,6 @@ export default function Header({ setHeaderHeight }) {
     }
   }, [open, mounted]);
 
-  // When menu opens, focus the close button; when it closes, return focus to trigger
-useEffect(() => {
-  if (open) {
-    // slight delay helps when the panel has an enter animation
-    const id = setTimeout(() => closeRef.current?.focus(), 10);
-    return () => clearTimeout(id);
-  } else {
-    // return focus after the exit animation completes
-    const id = setTimeout(() => triggerRef.current?.focus(), ANIM_MS);
-    return () => clearTimeout(id);
-  }
-}, [open]);
 
 useEffect(() => {
   if (!open) return;
