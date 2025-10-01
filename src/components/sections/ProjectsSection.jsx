@@ -29,8 +29,8 @@ const ProjectsSection = ( { headerHeight } ) =>
           <div className="hidden md:block" aria-hidden="true">
             <Spacer size="xxl" />
           </div>
-          <h2 className="block md:hidden text-center projects-title">Projects</h2>
-          <ul className="project-list mt-10 md:mt-0">
+          <h2 id="projects-heading" className="block md:hidden text-center projects-title">Projects</h2>
+          <ul className="project-list mt-10 md:mt-0" aria-labelledby="projects-heading">
 
             { projects.map( ( project ) => (
               <li
@@ -50,7 +50,7 @@ const ProjectsSection = ( { headerHeight } ) =>
 
                 </div>
 
-                <span className="project-year">{ project.year }</span>
+                <time className="project-year" dateTime={String(project.year)}>{ project.year }</time>
               </li>
             ) ) }
           </ul>
@@ -60,8 +60,8 @@ const ProjectsSection = ( { headerHeight } ) =>
                 href={`${import.meta.env.BASE_URL}cv/MEARS-Eleanor-CV-FR-EN-June-2025.pdf`}
                 variant="primary"
                 icon={ Download }
-                aria-label="Download Eleanor Mears's resume"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Download CV
               </LinkButton>
@@ -72,7 +72,7 @@ const ProjectsSection = ( { headerHeight } ) =>
         <div className="hidden md:flex flex-col items-start justify-start">
           <div className="md:sticky self-start" style={ { top: `${ headerHeight }px` } }>
             <Spacer size="xxl" />
-            <h2 className="projects-title">Projects</h2>
+            <h2 className="projects-title" aria-hidden="true">Projects</h2>
             <Spacer size="xxl" />
             <div className="flex flex-col md:flex-row items-end gap-4">
               <LinkButton
@@ -89,7 +89,7 @@ const ProjectsSection = ( { headerHeight } ) =>
                 variant="primary"
                 icon={ Download }
                 iconLgOnly
-                aria-label="Download Eleanor Mears's resume"
+                
                 target="_blank"
               >
                 Download CV
@@ -100,15 +100,16 @@ const ProjectsSection = ( { headerHeight } ) =>
       </div>
 
       <div className="container hidden md:block max-w-6xl mx-auto mt-8">
-        <Link to="/projects">
+
           <LinkButton
+          href="/projects"
+      
             variant="secondary"
             icon={ ArrowUpRight }
-            aria-label="Go to projects overview"
           >
             See all projects
           </LinkButton>
-        </Link>
+
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 .hero-heading {
   color: var(--color-primary);
-  font-size: clamp(2.5rem, 6vw + 2rem, 8rem); /*  font-size: clamp(MINIMUM_SIZE, PREFERRED_VALUE, MAXIMUM_SIZE);  */
+  font-size: clamp(2.5rem, 7vw + 2rem, 8rem); /*  font-size: clamp(MINIMUM_SIZE, PREFERRED_VALUE, MAXIMUM_SIZE);  */
   /* font-size: 4rem; */
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-tight);
@@ -10,7 +10,7 @@
 
 .hero-subheading {
   color: var(--color-highlight);
-  font-size: clamp(1.5rem, 5vw + 1rem, 6rem); 
+  font-size: clamp(1.5rem, 6vw + 1rem, 6rem); 
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-tight);
   letter-spacing: -0.045em;
