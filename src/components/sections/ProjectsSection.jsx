@@ -13,11 +13,11 @@ const ProjectsSection = ( { headerHeight } ) =>
 
   return (
     <section
-      className="section projects-section border-b"
+      className="o-section projects-section border-b"
       id="projects"
       style={ { minHeight: projectsSectionMinHeight } }
     >
-      <div className="container max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+      <div className="o-container max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
         {/* LEFT COLUMN: Projects List */ }
         <div className="pr-2">
           {/* md and below */ }
@@ -99,7 +99,7 @@ const ProjectsSection = ( { headerHeight } ) =>
         </div>
       </div>
 
-      <div className="container hidden md:block max-w-6xl mx-auto mt-8">
+      <div className="o-container hidden md:block max-w-6xl mx-auto mt-8">
 
           <LinkButton
           href="/projects"

@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <footer role="contentinfo" className="footer">
             {/* Top grid */}
-            <div className="container py-16">
+            <div className="o-container py-16">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
                     {/* Logo */}
                     <div className="lg:col-span-2 hidden lg:block">

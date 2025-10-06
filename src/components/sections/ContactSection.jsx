@@ -6,9 +6,9 @@ import atomiumImage from "../../assets/images/atomium.jpg";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="section contact-section relative">
+    <section id="contact" className="o-section contact-section relative">
       <Spacer size="lg" />
-      <div className="container relative z-10">
+      <div className="o-container relative z-10">
         {/* Title */}
         <h2 className="text-center">Get In Touch</h2>
         <Spacer size="lg" />

@@ -1,7 +1,5 @@
 /* Section spacing */
 .o-section { padding-top: 3rem; padding-bottom: 3rem; }
-/* Migration alias: keep your existing class working while you swap to .o-section */
-.section { padding-top: 3rem; padding-bottom: 3rem; }
 
 /* Standard container */
 .o-container {
@@ -9,8 +7,6 @@
   margin: 0 auto;
   padding-inline: 1rem;
 }
-/* Migration alias */
-.container { max-width: var(--max-width-regular); margin: 0 auto; padding-inline: 1rem; }
 
 /* Edge-to-edge container with gutters */
 .o-container-wide { width: calc(100% - 40px); margin-inline: auto; }
@@ -19,13 +15,6 @@
 @media (min-width: 64rem) { .o-container-wide { width: calc(100% - 120px); } }
 @media (min-width: 80rem) { .o-container-wide { width: calc(100% - 120px); } }
 @media (min-width: 96rem) { .o-container-wide { width: calc(100% - 120px); max-width: var(--max-width-wide); } }
-/* Migration alias */
-.container-wide { width: calc(100% - 40px); margin-inline: auto; }
-@media (min-width: 40rem) { .container-wide { width: calc(100% - 60px); } }
-@media (min-width: 48rem) { .container-wide { width: calc(100% - 60px); } }
-@media (min-width: 64rem) { .container-wide { width: calc(100% - 120px); } }
-@media (min-width: 80rem) { .container-wide { width: calc(100% - 120px); } }
-@media (min-width: 96rem) { .container-wide { width: calc(100% - 120px); max-width: var(--max-width-wide); } }
 
 /* Simple layout objects to replace Tailwind flex/grid */
 .o-flex { display: flex; }

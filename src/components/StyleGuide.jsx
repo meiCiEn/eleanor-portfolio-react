@@ -5,12 +5,12 @@ export default function StyleGuide ()
 {
     return (
         <main className="max-w-5xl mx-auto px-4 py-16 space-y-16">
-            <header className="text-center section container">
+            <header className="text-center o-section o-container">
                 <h1 className="text-5xl font-medium text-[--color-primary]">Visual Style Guide</h1>
             </header>
 
             {/* Typography */ }
-            <section className='section container'>
+            <section className='o-section o-container'>
                 <h2 className="text-3xl font-medium mb-6 text-[--color-primary]">Typography</h2>
                 <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm space-y-4 text-[--color-primary]">
                     <h1 className="text-[--color-primary] text-[85px] font-medium leading-tight">Heading 1</h1>
@@ -28,7 +28,7 @@ export default function StyleGuide ()
 
 
             {/* Buttons */ }
-            <section className='section container'>
+            <section className='o-section o-container'>
                 <h2 className="text-3xl font-medium mb-6 text-[--color-primary]">Buttons</h2>
                 <div className="space-x-4">
                     <button className="button">Primary Button</button>
@@ -46,7 +46,7 @@ export default function StyleGuide ()
             </section>
 
             {/* Links */ }
-            <section className='section container'>
+            <section className='o-section o-container'>
                 <h2 className="text-3xl font-medium mb-6 text-[--color-primary]">Links</h2>
                 <p className="text-lg">
                     Visit my <a href="#" className="underline hover:text-[--color-accent]">homepage</a> or{ ' ' }
@@ -55,7 +55,7 @@ export default function StyleGuide ()
             </section>
 
             {/* Color Palette */ }
-            <section className='section container'>
+            <section className='o-section o-container'>
                 <h2 className="text-3xl font-medium mb-6 text-[--color-primary]">Color Palette</h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                     { [
@@ -79,7 +79,7 @@ export default function StyleGuide ()
             </section>
 
             {/* Form */ }
-            <section className='section container'>
+            <section className='o-section o-container'>
                 <h2 className="text-3xl font-medium mb-6 text-[--color-primary]">Form Elements</h2>
                 <form className="space-y-6 max-w-md">
                     <div>

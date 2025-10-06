@@ -10,8 +10,8 @@ const SkillsSection = ( { headerHeight } ) =>
     const skillsSectionMinHeight = `calc(100vh - ${ headerHeight }px)`;
 
     return (
-        <section id="skills" className="section flex flex-col justify-center border-b" style={ { minHeight: skillsSectionMinHeight } }>
-            <div className="container">
+        <section id="skills" className="o-section flex flex-col justify-center border-b" style={ { minHeight: skillsSectionMinHeight } }>
+            <div className="o-container">
                 <Spacer size="lg" />
                 <h2 className="text-center">Skills</h2>
                 <ul className="flex flex-col md:flex-row justify-center gap-8 mt-10">

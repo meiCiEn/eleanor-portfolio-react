@@ -13,7 +13,7 @@ const ProjectPage = () => {
 
     if (!project) {
         return (
-            <div className="container section">
+            <div className="o-container o-section">
                 <h1>Project not found.</h1>
                 <p>
                     Return to <Link to="/">home page</Link>.
@@ -42,8 +42,8 @@ const ProjectPage = () => {
     return (
 
         <main id="main" tabIndex="-1">
-            <section className="section">
-                <div className="container-wide flex justify-between items-center">
+            <section className="o-section">
+                <div className="o-container-wide flex justify-between items-center">
                     {/* Mobile: back button */}
                     <div className="sm:hidden">
                         {/* Prefer history back only if referrer is your Projects page */}
@@ -63,11 +63,11 @@ const ProjectPage = () => {
                     </div>
 
                     {/* Tablet/desktop: full breadcrumb */}
-                    <div className="hidden sm:flex container-wide justify-end">
+                    <div className="hidden sm:flex o-container-wide justify-end">
                         <Breadcrumb items={breadcrumbItems} />
                     </div>
                 </div>
-                <div className="container-wide mt-24">
+                <div className="o-container-wide mt-24">
 
 
                     {/* Row 1: Title (left) + Roles (right) */}
@@ -172,8 +172,8 @@ const ProjectPage = () => {
 
 
                 {/* ===== Gallery ===== */}
-                <section id="see-more" className="section">
-                    <div className="container-wide">
+                <section id="see-more" className="o-section">
+                    <div className="o-container-wide">
                         {galleryItems.length ? (
                             <div className={`grid gap-10 ${gridCols}`}>
                                 {galleryItems.map((item, i) => (
@@ -200,7 +200,7 @@ const ProjectPage = () => {
                         )}
                     </div>
                 </section>
-                <section className="flex container-wide justify-between">
+                <section className="flex o-container-wide justify-between">
                     {project.previousProjectSlug && (
                         <div className="mt-12">
                             <Link to=

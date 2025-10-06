@@ -10,8 +10,8 @@ const AboutSection = ( { headerHeight } ) =>
   const aboutSectionMinHeight = `calc(100vh - ${ headerHeight }px)`;
 
   return (
-    <section id="about" className="section flex flex-col justify-between border-b-1" style={ { minHeight: aboutSectionMinHeight } } >
-      <div className="container flex flex-col-reverse md:flex-row items-start justify-between gap-10">
+    <section id="about" className="o-section flex flex-col justify-between border-b-1" style={ { minHeight: aboutSectionMinHeight } } >
+      <div className="o-container flex flex-col-reverse md:flex-row items-start justify-between gap-10">
 
 
         <div className="md:w-1/2 lg:w-2/3 flex flex-col">
@@ -54,7 +54,7 @@ const AboutSection = ( { headerHeight } ) =>
         </div>
       </div>
       <div className="hidden sm:block"><Spacer size="xl" /></div>
-      <div className="container hidden sm:block">
+      <div className="o-container hidden sm:block">
         <LinkButton
           href="#skills"
           variant="secondary"
