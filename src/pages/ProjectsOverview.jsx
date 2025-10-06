@@ -13,7 +13,7 @@ const ProjectsOverview = () => {
   ];
 
   return (
-    <main id="main" tabindex="-1" className="section container-wide">
+    <main id="main" tabIndex="-1" className="section container-wide">
       <div className="container-wide flex justify-end">
         <Breadcrumb items={breadcrumbItems} />
       </div>
