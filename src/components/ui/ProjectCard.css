@@ -35,8 +35,8 @@
   color: var(--color-primary);
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-negative);
+  margin-bottom: 1rem;
 }
 
 .project-summary {
