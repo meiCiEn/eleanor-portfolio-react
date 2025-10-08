@@ -4,234 +4,238 @@ import { useParams, Link } from "react-router-dom";
 import { projects } from "../data/projectsData";
 import LinkButton from "../components/ui/LinkButton";
 import { ArrowDownLeft, ArrowUpRight, ArrowUpLeft } from "lucide-react";
-import Breadcrumb from '../components/ui/Breadcrumb';
-
+import Breadcrumb from "../components/ui/Breadcrumb";
 
 const ProjectPage = () => {
-    const { slug } = useParams();
-    const project = projects.find((p) => p.slug === slug);
+  const { slug } = useParams();
+  const project = projects.find((p) => p.slug === slug);
 
-    if (!project) {
-        return (
-            <div className="o-container o-section">
-                <h1>Project not found.</h1>
-                <p>
-                    Return to <Link to="/">home page</Link>.
-                </p>
-            </div>
-        );
-    }
-
-    // define breadcrumbs
-    const breadcrumbItems = [
-        { label: 'Home', to: '/' },
-        { label: 'Projects', to: '/projects' },
-        { label: project.title } // last one has no "to"
-    ];
-
-    const galleryItems = (project.gallery || []).filter(g => g?.src); // skip empty/missing
-    const gridCols = galleryItems.length > 1 ? "md:grid-cols-2" : "grid-cols-1";
-
-    function getImageClass(items, item) {
-        if (items.length === 1) return "md:w-4/5 m-auto";   // single image = full width
-        if (item.mobile) return "w-full sm:w-1/2";          // mobile screenshots half width
-        return "w-full";                            // desktop screenshots full width
-    }
-
-
+  if (!project) {
     return (
-
-        <main id="main" tabIndex="-1">
-            <section className="o-section">
-                <div className="o-container-wide flex justify-between items-center">
-                    {/* Mobile: back button */}
-                    <div className="sm:hidden">
-                        {/* Prefer history back only if referrer is your Projects page */}
-                        <Link
-                            to="/#projects"
-                            onClick={(e) => {
-                                if (document.referrer?.startsWith(window.location.origin + "/projects")) {
-                                    e.preventDefault();
-                                    window.history.back();
-                                }
-                            }}
-                            className="inline-flex items-center gap-2 underline"
-
-                        >
-                            <ArrowUpLeft className="w-4 h-4" aria-hidden="true" focusable="false" /> Back to Projects
-                        </Link>
-                    </div>
-
-                    {/* Tablet/desktop: full breadcrumb */}
-                    <div className="hidden sm:flex o-container-wide justify-end">
-                        <Breadcrumb items={breadcrumbItems} />
-                    </div>
-                </div>
-                <div className="o-container-wide mt-24">
-
-
-                    {/* Row 1: Title (left) + Roles (right) */}
-                    <div className="grid gap-4 md:grid-cols-[2fr_1fr] items-end mb-2 md:mb-4 lg:mb-6">
-
-
-                        <div>
-                            <h1 className="mb-1">{project.title}</h1>
-                        </div>
-
-                        {/* Roles list – stacked vertically, right-aligned on desktop, left on mobile */}
-                        {project.roles?.length > 0 && (
-                            <ul className="flex flex-col md:items-end project-roles">
-                                {project.roles.map((r) => (
-                                    <li key={r} className="color-text">
-                                        {r}
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-
-                    </div>
-
-
-                    {/* Row 2: Tagline (full width) */}
-                    {project.tagline && (
-                        <p className="mt-6 mb-8 pb-10 border-b-1 project-tagline">{project.tagline}</p>
-                    )}
-
-                    {/* Row 2.1: Website */}
-
-                    <div>
-                        <p className="mb-2 text-sm font-bold tracking-wide color-primary">
-                            {project.type ? project.type.toUpperCase() : " "}
-                        </p>
-                    </div>
-
-                    {/* Row 3: Overview (left), Tech (middle), Year (right) */}
-                    <div className="pt-12 border-t-1">
-
-                        <div className="grid gap-8 md:grid-cols-[4fr_2fr_2fr_2fr_1fr] items-start">
-
-                            {/* Overview block with small category label like “WEBSITE” and “Overview” title */}
-                            <div>
-
-                                <h2 className="project-subheading">Overview</h2>
-                                <div className="project-overview">
-                                    {/* If you ever store multiple paragraphs, split on \n\n */}
-                                    {String(project.overview).split("\n\n").map((para, i) => (
-                                        <p key={i} className={i > 0 ? "mt-4" : ""}>
-                                            {para}
-                                        </p>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/*Blank*/}
-                            <div></div>
-
-                            {/* Team */}
-                            <div>
-                                {project.team?.length > 0 && (
-                                    <>
-                                        <h3 className="project-subheading">Team</h3>
-                                        <p className="project-overview">{project.team.join(", ")}</p>
-                                    </>
-
-                                )}
-                            </div>
-
-                            {/* Tech */}
-                            <div>
-                                <h3 className="project-subheading">Tech</h3>
-                                <p>
-                                    {project.tech?.length ? project.tech.join(", ") : "—"}
-                                </p>
-                            </div>
-
-                            {/* Year */}
-                            <div className="md:text-right">
-                                <h3 className="project-subheading">Year</h3>
-                                <time className="text-lg-custom" dateTime={String(project.year)}>{project.year || "—"}</time>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Row 4: Buttons (See more → gallery anchor, Go to site) */}
-                    <div className="mt-10 flex flex-wrap gap-4 justify-center sm:justify-end ">
-                        {/* “See more” scrolls to your gallery section id */}
-                        <LinkButton href="#see-more" variant="secondary" id="see-more-button">
-                            See more
-                        </LinkButton>
-
-                        {/* External site */}
-                        {project.site && (
-                            <LinkButton href={project.site} target="_blank" rel="noopener noreferrer">
-                                Go to site
-                            </LinkButton>
-                        )}
-                    </div>
-                </div>
-
-
-                {/* ===== Gallery ===== */}
-                <section id="see-more" className="o-section">
-                    <div className="o-container-wide">
-                        {galleryItems.length ? (
-                            <div className={`grid gap-10 ${gridCols}`}>
-                                {galleryItems.map((item, i) => (
-                                    <article key={`${project.slug}-gallery-${i}`}><figure className="project-figure">
-                                        {item.caption && (
-
-                                            <figcaption className="project-gallery-label">
-                                                {item.caption}
-                                            </figcaption>
-                                        )}
-
-                                        <img
-                                            src={item.src}
-                                            alt={item.alt || item.caption || project.title}
-                                            loading="lazy"
-                                            className={`object-cover ${getImageClass(galleryItems, item)}`}
-                                        />
-                                    </figure>
-                                    </article>
-                                ))}
-                            </div>
-                        ) : (
-                            <p className="text-lg-custom">Gallery coming soon.</p>
-                        )}
-                    </div>
-                </section>
-                <section className="flex o-container-wide justify-between">
-                    {project.previousProjectSlug && (
-                        <div className="mt-12">
-                            <Link to=
-                                {`/projects/${project.previousProjectSlug}`}
-                                className="underline flex items-center gap-2"
-                            >
-                                <ArrowDownLeft className="w-4 h-4" aria-hidden="true" focusable="false" />
-                                Previous project: <span className="underline font-semibold">{project.previousProjectTitle}</span>
-                            </Link>
-                        </div>
-                    )}
-
-                    {project.nextProjectSlug && (
-                        <div className="mt-12">
-                            <Link
-                                to={`/projects/${project.nextProjectSlug}`}
-                                className="underline flex items-center gap-2"
-                            >
-                                Next project: <span className="underline font-semibold">{project.nextProjectTitle}</span>
-                                <ArrowUpRight className="w-4 h-4" aria-hidden="true" focusable="false" />
-                            </Link>
-                        </div>
-                    )}
-                </section>
-
-
-
-            </section>
-        </main>
-
+      <div className="o-container o-section">
+        <h1>Project not found.</h1>
+        <p>
+          Return to <Link to="/">home page</Link>.
+        </p>
+      </div>
     );
+  }
+
+  const breadcrumbItems = [
+    { label: "Home", to: "/" },
+    { label: "Projects", to: "/projects" },
+    { label: project.title },
+  ];
+
+  const galleryItems = (project.gallery || []).filter((g) => g?.src);
+  const isTwoCols = galleryItems.length > 1;
+
+  function getImageClass(items, item) {
+    if (items.length === 1) return "project-img project-img--single";
+    if (item.mobile) return "project-img project-img--half";
+    return "project-img";
+  }
+
+  return (
+    <main id="main" tabIndex="-1">
+      <section className="o-section">
+        {/* Top bar: back (mobile) + breadcrumb (sm+) */}
+        <div className="o-container-wide project-topbar">
+          {/* Mobile: back button */}
+          <div className="project-only-mobile">
+            <Link
+              to="/#projects"
+              onClick={(e) => {
+                if (
+                  document.referrer?.startsWith(
+                    window.location.origin + "/projects"
+                  )
+                ) {
+                  e.preventDefault();
+                  window.history.back();
+                }
+              }}
+              className="project-backlink"
+            >
+              <ArrowUpLeft size={16} aria-hidden="true" focusable="false" />
+              Back to Projects
+            </Link>
+          </div>
+
+          {/* Tablet/desktop: full breadcrumb */}
+          <div className="project-only-desktop project-crumbwrap">
+            <Breadcrumb items={breadcrumbItems} />
+          </div>
+        </div>
+
+        {/* Main container */}
+        <div className="o-container-wide project-topgap">
+          {/* Row 1: Title (left) + Roles (right) */}
+          <div className="project-head">
+            <div>
+              <h1 className="project-title">{project.title}</h1>
+            </div>
+
+            {project.roles?.length > 0 && (
+              <ul className="project-roles">
+                {project.roles.map((r) => (
+                  <li key={r} className="color-text">
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {/* Row 2: Tagline */}
+          {project.tagline && (
+            <p className="project-tagline project-tagline--rule">
+              {project.tagline}
+            </p>
+          )}
+
+          {/* Row 2.1: Type label */}
+          <div>
+            <p className="project-type-label">
+              {project.type ? project.type.toUpperCase() : " "}
+            </p>
+          </div>
+
+          {/* Row 3: Overview / Team / Tech / Year */}
+          <div className="project-meta">
+            <div className="project-meta-grid">
+              {/* Overview */}
+              <div>
+                <h2 className="project-subheading">Overview</h2>
+                <div className="project-overview">
+                  {String(project.overview)
+                    .split("\n\n")
+                    .map((para, i) => (
+                      <p key={i} className={i > 0 ? "project-overview--spaced" : ""}>
+                        {para}
+                      </p>
+                    ))}
+                </div>
+              </div>
+
+              {/* Blank spacer cell */}
+              <div />
+
+              {/* Team */}
+              <div>
+                {project.team?.length > 0 && (
+                  <>
+                    <h3 className="project-subheading">Team</h3>
+                    <p className="project-overview">
+                      {project.team.join(", ")}
+                    </p>
+                  </>
+                )}
+              </div>
+
+              {/* Tech */}
+              <div>
+                <h3 className="project-subheading">Tech</h3>
+                <p>{project.tech?.length ? project.tech.join(", ") : "—"}</p>
+              </div>
+
+              {/* Year */}
+              <div className="project-yearcol">
+                <h3 className="project-subheading">Year</h3>
+                <time className="text-lg-custom" dateTime={String(project.year)}>
+                  {project.year || "—"}
+                </time>
+              </div>
+            </div>
+          </div>
+
+          {/* Row 4: Buttons */}
+          <div className="project-actions">
+            <LinkButton href="#see-more" variant="secondary" id="see-more-button">
+              See more
+            </LinkButton>
+
+            {project.site && (
+              <LinkButton
+                href={project.site}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Go to site
+              </LinkButton>
+            )}
+          </div>
+        </div>
+
+        {/* ===== Gallery ===== */}
+        <section id="see-more" className="o-section">
+          <div className="o-container-wide">
+            {galleryItems.length ? (
+              <div
+                className={`project-gallery ${
+                  isTwoCols ? "project-gallery--two" : ""
+                }`}
+              >
+                {galleryItems.map((item, i) => (
+                  <article key={`${project.slug}-gallery-${i}`}>
+                    <figure className="project-figure">
+                      {item.caption && (
+                        <figcaption className="project-gallery-label">
+                          {item.caption}
+                        </figcaption>
+                      )}
+
+                      <img
+                        src={item.src}
+                        alt={item.alt || item.caption || project.title}
+                        loading="lazy"
+                        className={getImageClass(galleryItems, item)}
+                      />
+                    </figure>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <p className="text-lg-custom">Gallery coming soon.</p>
+            )}
+          </div>
+        </section>
+
+        {/* Prev / Next pager */}
+        <section className="o-container-wide project-pager">
+          {project.previousProjectSlug && (
+            <div className="project-pager__cell">
+              <Link
+                to={`/projects/${project.previousProjectSlug}`}
+                className="project-pager__link"
+              >
+                <ArrowDownLeft size={16} aria-hidden="true" focusable="false" />
+                Previous project:{" "}
+                <span className="project-pager__strong">
+                  {project.previousProjectTitle}
+                </span>
+              </Link>
+            </div>
+          )}
+
+          {project.nextProjectSlug && (
+            <div className="project-pager__cell">
+              <Link
+                to={`/projects/${project.nextProjectSlug}`}
+                className="project-pager__link project-pager__link--next"
+              >
+                Next project:{" "}
+                <span className="project-pager__strong">
+                  {project.nextProjectTitle}
+                </span>
+                <ArrowUpRight size={16} aria-hidden="true" focusable="false" />
+              </Link>
+            </div>
+          )}
+        </section>
+      </section>
+    </main>
+  );
 };
 
 export default ProjectPage;
