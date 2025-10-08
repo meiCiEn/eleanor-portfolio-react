@@ -6,38 +6,42 @@ import atomiumImage from "../../assets/images/atomium.jpg";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="o-section contact-section relative">
+    <section id="contact" className="o-section contact-section">
       <Spacer size="lg" />
-      <div className="o-container relative z-10">
+
+      <div className="o-container contact-foreground">
         {/* Title */}
-        <h2 className="text-center">Get In Touch</h2>
+        <h2 className="u-text-center">Get In Touch</h2>
         <Spacer size="lg" />
-        <p className="mb-10 text-center text-lg-custom">
+        <p className="contact-intro u-text-center text-lg-custom">
           Want to collaborate, or just say hello?
         </p>
         <Spacer size="lg" />
 
         {/* Panel */}
-        <div className="contact-panel grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 md:gap-12 p-6 md:p-10 relative z-10">
+        <div className="contact-panel">
           {/* Left column */}
-          <aside className="space-y-8">
+          <aside className="contact-aside">
             <div>
-              <h3 className="contact-heading pb-10 text-center md:text-left">Contact me</h3>
+              <h3 className="contact-heading">Contact me</h3>
 
-              <div className="contact-label mb-2">Email</div>
-              <a href="mailto:info@eleanor-mears.com" className="contact-link block mb-6">
+              <div className="contact-label">Email</div>
+              <a
+                href="mailto:info@eleanor-mears.com"
+                className="contact-link contact-link--spaced"
+              >
                 info@eleanor-mears.com
               </a>
 
-              <div className="contact-label mb-2">Phone</div>
-              <a href="tel:+32467662544" className="contact-link block">
+              <div className="contact-label">Phone</div>
+              <a href="tel:+32467662544" className="contact-link">
                 (+32) 467 66 25 44
               </a>
             </div>
 
             <div>
-              <div className="contact-label mb-3">Social media</div>
-              <div className="flex items-center gap-3">
+              <div className="contact-label contact-label--lg">Social media</div>
+              <div className="contact-socials">
                 <a
                   href="https://github.com/meiCiEn"
                   target="_blank"
@@ -45,7 +49,7 @@ export default function ContactSection() {
                   className="hero-link"
                   aria-label="Visit Eleanor Mears’s GitHub profile"
                 >
-                  <FaGithub className="text-lg" aria-hidden="true" />
+                  <FaGithub aria-hidden="true" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/elliemears/"
@@ -54,16 +58,16 @@ export default function ContactSection() {
                   className="hero-link"
                   aria-label="Visit Eleanor Mears’s LinkedIn profile"
                 >
-                  <FaLinkedin className="text-lg" aria-hidden="true" />
+                  <FaLinkedin aria-hidden="true" />
                 </a>
               </div>
             </div>
           </aside>
 
           {/* Right column */}
-          <div className="border-t md:border-t-0 md:border-l contact-border">
-            <div className="md:pl-10 pt-6 md:pt-0">
-              <h3 className="contact-heading pb-10 text-center md:text-left">Send me a message</h3>
+          <div className="contact-right contact-border">
+            <div className="contact-form-wrap">
+              <h3 className="contact-heading">Send me a message</h3>
               <ContactForm />
             </div>
           </div>
@@ -71,8 +75,8 @@ export default function ContactSection() {
       </div>
 
       {/* Background image */}
-      <div className="contact-bg">
-        <img src={atomiumImage} alt="Atomium in Brussels" />
+      <div className="contact-bg" aria-hidden="true">
+        <img src={atomiumImage} alt="" />
       </div>
     </section>
   );
