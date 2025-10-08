@@ -1,27 +1,31 @@
-
-/* Tailwind CSS breakpoints (min-width) */
-
-/* Small (sm) — 640px (40rem) and up */
-@media (min-width: 40rem) {
-  /* your overrides here */
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
-/* Medium (md) — 768px (48rem) and up */
-@media (min-width: 48rem) {
-  /* your overrides here */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem; 
+  margin-top: 2.5rem;
+}
+@media (min-width: 48rem) { 
+  .skills-list { flex-direction: row; }
 }
 
-/* Large (lg) — 1024px (64rem) and up */
-@media (min-width: 64rem) {
-  /* your overrides here */
+.skills-item { flex: 1 1 100%; }
+@media (min-width: 48rem) { 
+  .skills-item { flex: 1 1 0; } /* equal widths in a row */
 }
 
-/* Extra Large (xl) — 1280px (80rem) and up */
-@media (min-width: 80rem) {
-  /* your overrides here */
+.skills-cta {
+  display: none;
+  justify-content: center;
+  margin-top: 2.5rem; /* mt-10 */
 }
-
-/* 2X Large (2xl) — 1536px (96rem) and up */
-@media (min-width: 96rem) {
-  /* your overrides here */
+@media (min-width: 40rem) { /* sm */
+  .skills-cta { display: flex; }
 }
