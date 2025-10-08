@@ -1,26 +1,24 @@
-/* Tailwind CSS breakpoints (min-width) */
-
-/* Small (sm) — 640px (40rem) and up */
-@media (min-width: 40rem) {
-  /* your overrides here */
+.po-crumbbar {
+  display: flex;
+  justify-content: flex-end;
 }
 
-/* Medium (md) — 768px (48rem) and up */
+.po-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 4rem;  
+  row-gap: 0;       
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 @media (min-width: 48rem) {
-  /* your overrides here */
+  .po-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Large (lg) — 1024px (64rem) and up */
-@media (min-width: 64rem) {
-  /* your overrides here */
+.po-item { margin-bottom: 2rem; } 
+@media (min-width: 48rem) {    
+  .po-grid > li:nth-child(odd) {
+    margin-top: 120px;           
 }
-
-/* Extra Large (xl) — 1280px (80rem) and up */
-@media (min-width: 80rem) {
-  /* your overrides here */
-}
-
-/* 2X Large (2xl) — 1536px (96rem) and up */
-@media (min-width: 96rem) {
-  /* your overrides here */
 }
