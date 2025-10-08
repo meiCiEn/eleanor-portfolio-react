@@ -2,12 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import "./ProjectCard.css";
-import Spacer from "./Spacer";
 
 function Summary({ project }) {
   const text = project.summary?.text ?? project.tagline ?? "";
   const linkText = project.summary?.linkText;
-  const linkTo = project.site;
+  const linkTo = project.summary?.linkText && project.site;
 
   if (!linkText || !linkTo) {
     return <p className="project-summary">{text}</p>;
@@ -21,7 +20,7 @@ function Summary({ project }) {
   const after = text.slice(i + linkText.length);
 
   return (
-    <p className="project-summary mb-8">
+    <p className="project-summary project-summary--spaced">
       {before}
       <a
         href={linkTo}
@@ -40,8 +39,8 @@ const ProjectCard = ({ project }) => {
   const imgSrc = project.thumbnail || project.gallery?.[0]?.src || "";
 
   return (
-    <article className="space-y-4">
-      {/* Image: all visuals handled in CSS */}
+    <article className="project-card">
+      {/* Image */}
       <div className="project-image-wrap">
         <Link to={`/projects/${project.slug}`} className="project-image-link">
           <img
@@ -64,10 +63,10 @@ const ProjectCard = ({ project }) => {
       <div>
         <Link
           to={`/projects/${project.slug}`}
-          className="project-button inline-flex items-center gap-2 transition-transform ease-in-out duration-300 hover:scale-95 origin-bottom-left"
+          className="project-button"
           aria-label={`View details for ${project.title}`}
         >
-          View Details <ArrowUpRight className="w-4 h-4" />
+          View Details <ArrowUpRight size={16} aria-hidden="true" />
         </Link>
       </div>
     </article>

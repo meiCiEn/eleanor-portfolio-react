@@ -1,28 +1,27 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* ≈ space-y-4 */
+}
+
 .project-image-wrap {
   overflow: hidden;
   border-radius: var(--radius-md);
   background: var(--color-white);
 }
-
-.project-image-link {
-  display: block;
-}
-
+.project-image-link { display: block; }
 .project-image {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
-  object-position: top; 
+  object-position: top;
   filter: grayscale(100%);
   transition: filter 300ms ease-in-out;
 }
-
-
 .project-image-link:hover .project-image,
 .project-image-link:focus-visible .project-image {
   filter: grayscale(0%);
 }
-
 
 .project-type {
   font-size: var(--font-size-sm);
@@ -44,6 +43,7 @@
   font-size: var(--font-size-base);
   line-height: var(--line-height-relaxed);
 }
+.project-summary--spaced { margin-bottom: 2rem; }
 
 .project-summary__link {
   text-decoration: underline;
@@ -57,38 +57,17 @@
 }
 
 .project-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-wide);
   font-size: var(--font-size-sm);
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--color-primary);
+
+  transition: transform 300ms ease-in-out;
+  transform-origin: bottom left; 
 }
-
-/* Tailwind CSS breakpoints (min-width) */
-
-/* Small (sm) — 640px (40rem) and up */
-@media (min-width: 40rem) {
-  /* your overrides here */
-}
-
-/* Medium (md) — 768px (48rem) and up */
-@media (min-width: 48rem) {
-  /* your overrides here */
-}
-
-/* Large (lg) — 1024px (64rem) and up */
-@media (min-width: 64rem) {
-  /* your overrides here */
-}
-
-/* Extra Large (xl) — 1280px (80rem) and up */
-@media (min-width: 80rem) {
-  /* your overrides here */
-}
-
-/* 2X Large (2xl) — 1536px (96rem) and up */
-@media (min-width: 96rem) {
-  /* your overrides here */
-}
-
+.project-button:hover { transform: scale(0.95); }

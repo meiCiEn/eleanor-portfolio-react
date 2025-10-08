@@ -102,3 +102,9 @@
 /* Misc */
 .u-break-words { overflow-wrap: anywhere; word-break: break-word; }
 .u-not-italic { font-style: normal; }
+
+.u-inline-flex { display: inline-flex !important; }
+
+@media (min-width: 64rem) { /* lg */
+  .lg\:u-inline-flex { display: inline-flex !important; }
+}

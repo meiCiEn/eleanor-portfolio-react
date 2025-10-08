@@ -1,4 +1,3 @@
-// LinkButton.jsx
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
@@ -11,27 +10,27 @@ const LinkButton = ({
   variant = "primary",
   icon: Icon,
   showArrow = false,
-  iconLgOnly = false,           // 👈 NEW: only show icon at lg (≥1024px)
+  iconLgOnly = false, // show icon only at ≥1024px
   ...props
 }) => {
-  const buttonClass = classNames("button", {
-    "button-secondary": variant === "secondary",
-    "flex items-center gap-2": Icon || showArrow,
+  const buttonClass = classNames("c-button", {
+    "c-button--secondary": variant === "secondary",
   });
 
-  const iconWrapperClass = iconLgOnly ? "hidden lg:inline-flex" : "inline-flex";
+  // hide icon on mobile; show inline-flex at lg+
+  const iconWrapperClass = iconLgOnly ? "u-hidden lg:u-inline-flex" : undefined;
 
   return (
     <a href={href} id={id} className={buttonClass} {...props}>
       {children}
       {Icon && (
         <span className={iconWrapperClass}>
-          <Icon className="icon" size={18} />
+          <Icon className="icon" size={18} aria-hidden="true" />
         </span>
       )}
       {!Icon && showArrow && (
         <span className={iconWrapperClass}>
-          <ArrowDown className="icon" size={18} />
+          <ArrowDown className="icon" size={18} aria-hidden="true" />
         </span>
       )}
     </a>
@@ -45,7 +44,7 @@ LinkButton.propTypes = {
   variant: PropTypes.oneOf(["primary", "secondary"]),
   icon: PropTypes.elementType,
   showArrow: PropTypes.bool,
-  iconLgOnly: PropTypes.bool,    // 👈 NEW
+  iconLgOnly: PropTypes.bool,
 };
 
 LinkButton.defaultProps = {
