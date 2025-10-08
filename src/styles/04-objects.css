@@ -18,11 +18,27 @@
 
 /* Simple layout objects to replace Tailwind flex/grid */
 .o-flex { display: flex; }
+.o-flex--row { flex-direction: row; }
+.o-flex--col { flex-direction: column; }
+.o-flex--start { justify-content: flex-start; align-items: center; }
 .o-flex--center { justify-content: center; align-items: center; }
 .o-flex--end { justify-content: flex-end; }
+.o-flex--between { justify-content: space-between; align-items: center; }
+.o-flex--wrap { flex-wrap: wrap; }
+
 
 .o-grid { display: grid; gap: 2rem; }
 .o-grid--cols-1 { grid-template-columns: 1fr; }
 .o-grid--cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.o-grid--cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.o-grid--gap-6 { gap: 1.5rem; }
+.o-grid--gap-10 { gap: 2.5rem; }
+
 /* “at md” variant (48rem) for common cases */
 @media (min-width: 48rem) { .o-grid--cols-2-at-md { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+@media (min-width: 48rem) { .o-grid--cols-3-at-md { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+@media (min-width: 48rem) { .o-grid--12-at-md { grid-template-columns: repeat(12, minmax(0,1fr)); }
+}
+@media (min-width: 64rem) { /* lg */
+  .o-grid--1-3-3 { grid-template-columns: 1fr 3fr 3fr; }
+}

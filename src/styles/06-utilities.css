@@ -59,3 +59,46 @@
 .u-text-center {
     text-align: center;
 }
+
+.u-w-full { width: 100%; }           /* replaces Tailwind w-full when needed */
+.u-flex-1 { flex: 1 1 auto; }        /* replaces flex-1 */
+
+/* Display / responsive display */
+.u-hidden { display: none !important; }
+@media (min-width: 40rem) { /* sm */
+  .sm\:u-block { display: block !important; }
+  .sm\:u-justify-start { justify-content: flex-start !important; }
+  .sm\:u-justify-end { justify-content: flex-end !important; }
+}
+@media (min-width: 64rem) { /* lg */
+  .lg\:u-block { display: block !important; }
+  .lg\:u-grid { display: grid !important; }
+  .lg\:u-hidden { display: none !important; }
+}
+
+/* Alignment & text */
+.u-items-start { align-items: flex-start; }
+.u-items-end { align-items: flex-end; }
+.u-items-center { align-items: center; }
+.u-text-right { text-align: right; }
+.u-text-sm { font-size: var(--font-size-sm); }
+
+/* Gaps & margins (used below) */
+.u-gap-2 { gap: 0.5rem; }
+.u-gap-4 { gap: 1rem; }
+.u-gap-8 { gap: 2rem; }
+.u-mt-10 { margin-top: 2.5rem; }
+.u-mt-12 { margin-top: 3rem; }
+
+/* Grid column spans */
+@media (min-width: 48rem) { /* md */
+  .md\:u-col-span-3 { grid-column: span 3 / span 3; }
+  .md\:u-col-span-4 { grid-column: span 4 / span 4; }
+}
+@media (min-width: 64rem) { /* lg */
+  .lg\:u-col-span-2 { grid-column: span 2 / span 2; }
+}
+
+/* Misc */
+.u-break-words { overflow-wrap: anywhere; word-break: break-word; }
+.u-not-italic { font-style: normal; }
