@@ -72,7 +72,7 @@ export default function Footer() {
                         <p className="footer-label hidden sm:block mb-1">Email</p>
                         <a
                             href="mailto:info@eleanor-mears.com"
-                            className="footer-links flex justify-center sm:justify-start break-words"
+                            className="footer-links o-flex justify-center sm:justify-start break-words"
                         >
                             info@eleanor-mears.com
                         </a>
@@ -80,14 +80,14 @@ export default function Footer() {
 
                     <div className="md:col-span-4">
                         <p className="hidden footer-label sm:block mb-1">Phone</p>
-                        <a href="tel:+32467662544" className="footer-links flex justify-center sm:justify-start">
+                        <a href="tel:+32467662544" className="footer-links o-flex justify-center sm:justify-start">
                             (+32) 467 66 25 44
                         </a>
                     </div>
 
                     <div className="md:col-span-4 md:text-right">
                         <p className="footer-label hidden sm:block mb-1">Copyright</p>
-                        <p className="flex justify-center sm:justify-end">© Eleanor Mears {year}</p>
+                        <p className="o-flex justify-center sm:justify-end">© Eleanor Mears {year}</p>
                     </div>
                 </div>
             </div>

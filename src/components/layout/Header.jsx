@@ -100,7 +100,7 @@ useEffect(() => {
       <header className="site-header py-4 lg:py-6 w-screen sticky top-0" ref={refContainer}>
         {/* Desktop (lg+) */}
         <div className="max-w-7xl mx-auto px-8 items-center gap-4 hidden lg:grid [grid-template-columns:1fr_3fr_3fr]">
-          <div className="flex justify-start">
+          <div className="o-flex justify-start">
             <Link to="/#top" className="w-16 h-16" aria-label="Go to homepage">
               <img
                 src="/src/assets/images/logos/e-logo-dark.png"
@@ -111,7 +111,7 @@ useEffect(() => {
             </Link>
           </div>
 
-          <nav className="flex flex-col space-y-2 text-center" aria-label="Main navigation">
+          <nav className="o-flex flex-col space-y-2 text-center" aria-label="Main navigation">
             <ul className="flex space-x-8">
               <li>
                 <Link to="/#top" className="nav-link" aria-current={isHomeCurrent ? "true" : undefined}>
@@ -136,7 +136,7 @@ useEffect(() => {
             </ul>
           </nav>
 
-          <div className="flex flex-col items-end text-right space-y-2">
+          <div className="o-flex flex-col items-end text-right space-y-2">
             <div>
               <a href="mailto:info@eleanor-mears.com" className="contact-email uppercase">
                 info@eleanor-mears.com

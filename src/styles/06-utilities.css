@@ -1,0 +1,61 @@
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.text-xl-custom {
+    color: var(--color-primary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    letter-spacing: var(--letter-spacing-negative);
+}
+
+.text-lg-custom {
+    font-size: var(--font-size-lg);
+}
+
+/* Theme colour utilities */
+.color-text {
+    color: var(--color-text);
+}
+
+.color-text-light {
+    color: var(--color-text-light);
+}
+
+.color-bg {
+    color: var(--color-bg);
+}
+
+.color-primary {
+    color: var(--color-primary);
+}
+
+.color-accent {
+    color: var(--color-accent);
+}
+
+.color-accent-light {
+    color: var(--color-accent-light);
+}
+
+.color-white {
+    color: var(--color-white);
+}
+
+.color-highlight {
+    color: var(--color-highlight);
+}
+
+.u-text-center {
+    text-align: center;
+}

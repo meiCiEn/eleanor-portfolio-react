@@ -11,9 +11,8 @@ const HeroSection = ({ headerHeight }) => { // Receive headerHeight as a prop
       className="flex flex-col justify-between text-left border-b-1"
       style={{ minHeight: heroSectionMinHeight }} // Apply the calculated minHeight
     >
-           
 
-      <div className="o-container flex flex-col justify-center flex-1">
+      <div className="o-container w-full flex flex-col justify-center flex-1">
         <h1 className="hero-heading">Eleanor Mears</h1>
         <h2 className="hero-subheading">Front-End Developer</h2>
         <p className="hero-description mt-6 max-w-4xl pl-0 sm:pl-6 md:pl-12">
@@ -21,7 +20,7 @@ const HeroSection = ({ headerHeight }) => { // Receive headerHeight as a prop
         </p>
       </div>
 
-      <div className="hero-bottom o-container flex flex-col sm:flex-row justify-between items-center gap-4 mt-16 ">
+      <div className="hero-bottom o-container w-full flex flex-col sm:flex-row justify-between items-center gap-4 mt-16 ">
 
 
         <LinkButton
