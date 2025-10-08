@@ -24,8 +24,8 @@
 .skills-cta {
   display: none;
   justify-content: center;
-  margin-top: 2.5rem; /* mt-10 */
+  margin-top: 2.5rem; 
 }
-@media (min-width: 40rem) { /* sm */
+@media (min-width: 40rem) { 
   .skills-cta { display: flex; }
 }

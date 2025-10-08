@@ -6,79 +6,81 @@ import { ArrowUpRight, Mail, Download } from "lucide-react";
 import { projects } from "../../data/projectsData";
 import "./ProjectsSection.css";
 
-const ProjectsSection = ( { headerHeight } ) =>
-{
-  // Let the section grow with content, but never be shorter than the viewport minus header
-  const projectsSectionMinHeight = `calc(100vh - ${ headerHeight }px)`;
+const ProjectsSection = ({ headerHeight }) => {
+  const projectsSectionMinHeight = `calc(100vh - ${headerHeight}px)`;
 
   return (
     <section
-      className="o-section projects-section border-b"
+      className="o-section projects-section"
       id="projects"
-      style={ { minHeight: projectsSectionMinHeight } }
+      style={{ minHeight: projectsSectionMinHeight }}
     >
-      <div className="o-container max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-        {/* LEFT COLUMN: Projects List */ }
-        <div className="pr-2">
-          {/* md and below */ }
-          <div className="block md:hidden" aria-hidden="true">
+      <div className="o-container projects-grid">
+        {/* LEFT COLUMN: Projects List */}
+        <div className="projects-col projects-col--list">
+          {/* md and below */}
+          <div className="only-mobile" aria-hidden="true">
             <Spacer size="lg" />
           </div>
 
-          {/* md and up */ }
-          <div className="hidden md:block" aria-hidden="true">
+          {/* md and up */}
+          <div className="only-desktop" aria-hidden="true">
             <Spacer size="xxl" />
           </div>
-          <h2 id="projects-heading" className="block md:hidden text-center projects-title">Projects</h2>
-          <ul className="project-list mt-10 md:mt-0" aria-labelledby="projects-heading">
 
-            { projects.map( ( project ) => (
-              <li
-                key={ project.slug }
-                className="project-row flex justify-between items-center"
-              >
-                {/* Internal page link + optional external site icon */ }
-                <div className="flex items-center gap-2">
+          <h2 id="projects-heading" className="projects-title only-mobile u-text-center">
+            Projects
+          </h2>
+
+          <ul className="project-list" aria-labelledby="projects-heading">
+            {projects.map((project) => (
+              <li key={project.slug} className="project-row">
+                {/* Internal page link + optional external site icon */}
+                <div className="project-left">
                   <Link
-                    to={ `/projects/${ project.slug }` }
-                    className="project-link focus-visible:outline-2 focus-visible:outline-[var(--color-highlight)]"
-                    aria-label={ `Open project page for ${ project.title }` }
+                    to={`/projects/${project.slug}`}
+                    className="project-link"
+                    aria-label={`Open project page for ${project.title}`}
                   >
-                    { project.title }
-                    <ArrowUpRight className="icon-link w-4 h-4" />
+                    {project.title}
+                    <ArrowUpRight className="icon-link" />
                   </Link>
-
                 </div>
 
-                <time className="project-year" dateTime={String(project.year)}>{ project.year }</time>
+                <time className="project-year" dateTime={String(project.year)}>
+                  {project.year}
+                </time>
               </li>
-            ) ) }
+            ))}
           </ul>
-          <div className="flex justify-center md:hidden">
+
+          <div className="projects-cv">
             <Spacer size="md" />
-                        <LinkButton
-                href={`${import.meta.env.BASE_URL}cv/MEARS-Eleanor-CV-FR-EN-June-2025.pdf`}
-                variant="primary"
-                icon={ Download }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Download CV
-              </LinkButton>
-              </div>
+            <LinkButton
+              href={`${import.meta.env.BASE_URL}cv/MEARS-Eleanor-CV-FR-EN-June-2025.pdf`}
+              variant="primary"
+              icon={Download}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download CV
+            </LinkButton>
+          </div>
         </div>
 
-        {/* RIGHT COLUMN: Title + Buttons */ }
-        <div className="hidden md:flex flex-col items-start justify-start">
-          <div className="md:sticky self-start" style={ { top: `${ headerHeight }px` } }>
+        {/* RIGHT COLUMN: Title + Buttons */}
+        <div className="projects-col projects-col--right only-desktop">
+          <div className="projects-sticky" style={{ top: `${headerHeight}px` }}>
             <Spacer size="xxl" />
-            <h2 className="projects-title" aria-hidden="true">Projects</h2>
+            <h2 className="projects-title" aria-hidden="true">
+              Projects
+            </h2>
             <Spacer size="xxl" />
-            <div className="flex flex-col md:flex-row items-end gap-4">
+            <div className="projects-buttons">
               <LinkButton
                 href="#contact"
                 variant="secondary"
-                icon={ Mail }
+                icon={Mail}
                 iconLgOnly
                 aria-label="Email Eleanor Mears"
               >
@@ -87,9 +89,8 @@ const ProjectsSection = ( { headerHeight } ) =>
               <LinkButton
                 href={`${import.meta.env.BASE_URL}cv/MEARS-Eleanor-CV-FR-EN-June-2025.pdf`}
                 variant="primary"
-                icon={ Download }
+                icon={Download}
                 iconLgOnly
-                
                 target="_blank"
               >
                 Download CV
@@ -99,17 +100,10 @@ const ProjectsSection = ( { headerHeight } ) =>
         </div>
       </div>
 
-      <div className="o-container hidden md:block max-w-6xl mx-auto mt-8">
-
-          <LinkButton
-          href="/projects"
-      
-            variant="secondary"
-            icon={ ArrowUpRight }
-          >
-            See all projects
-          </LinkButton>
-
+      <div className="o-container projects-bottom only-desktop">
+        <LinkButton href="/projects" variant="secondary" icon={ArrowUpRight}>
+          See all projects
+        </LinkButton>
       </div>
     </section>
   );
