@@ -1,36 +1,37 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import LinkButton from '../ui/LinkButton';
-import './HeroSection.css';
+import LinkButton from "../ui/LinkButton";
+import "./HeroSection.css";
 
-const HeroSection = ({ headerHeight }) => { // Receive headerHeight as a prop
+const HeroSection = ({ headerHeight }) => {
   const heroSectionMinHeight = `calc(100vh - ${headerHeight}px)`;
 
   return (
-    <section id="hero"
-      className="flex flex-col justify-between text-left border-b-1"
-      style={{ minHeight: heroSectionMinHeight }} // Apply the calculated minHeight
+    <section
+      id="hero"
+      className="hero"
+      style={{ minHeight: heroSectionMinHeight }}
     >
-
-      <div className="o-container w-full flex flex-col justify-center flex-1">
+      <div className="o-container hero-top">
         <h1 className="hero-heading">Eleanor Mears</h1>
         <h2 className="hero-subheading">Front-End Developer</h2>
-        <p className="hero-description mt-6 max-w-4xl pl-0 sm:pl-6 md:pl-12">
+        <p className="hero-description">
           As a <strong>front-end web developer</strong> from the world of journalism, my goal is to create <strong>visually–appealing websites</strong> with accessibility and user experience at the forefront of each design.
         </p>
       </div>
 
-      <div className="hero-bottom o-container w-full flex flex-col sm:flex-row justify-between items-center gap-4 mt-16 ">
-
-
+      <div className="hero-bottom o-container">
         <LinkButton
-        href="#about"
-        variant="secondary"
-        showArrow
-        aria-label="Jump to about section"
-        target="_self">About Me</LinkButton>
+          href="#about"
+          variant="secondary"
+          showArrow
+          aria-label="Jump to about section"
+          target="_self"
+        >
+          About Me
+        </LinkButton>
 
-        <div className="items-center gap-6 hidden sm:flex">
+        <div className="hero-socials">
           <a
             href="https://github.com/meiCiEn"
             target="_blank"
@@ -38,7 +39,7 @@ const HeroSection = ({ headerHeight }) => { // Receive headerHeight as a prop
             className="hero-link"
             aria-label="Visit Eleanor Mears’s GitHub profile"
           >
-            <FaGithub className="text-lg" aria-hidden="true"/> GitHub
+            <FaGithub size={18} aria-hidden="true" /> GitHub
           </a>
           <a
             href="https://www.linkedin.com/in/elliemears/"
@@ -47,11 +48,10 @@ const HeroSection = ({ headerHeight }) => { // Receive headerHeight as a prop
             className="hero-link"
             aria-label="Visit Eleanor Mears’s LinkedIn profile"
           >
-            <FaLinkedin className="text-lg" aria-hidden="true"/> LinkedIn
+            <FaLinkedin size={18} aria-hidden="true" /> LinkedIn
           </a>
         </div>
       </div>
-
     </section>
   );
 };

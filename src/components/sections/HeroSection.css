@@ -1,7 +1,21 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.hero-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+  width: 100%;
+}
+
 .hero-heading {
   color: var(--color-primary);
-  font-size: clamp(2.5rem, 7vw + 2rem, 8rem); /*  font-size: clamp(MINIMUM_SIZE, PREFERRED_VALUE, MAXIMUM_SIZE);  */
-  /* font-size: 4rem; */
+  font-size: clamp(2.5rem, 7vw + 2rem, 8rem);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-negative);
@@ -10,7 +24,7 @@
 
 .hero-subheading {
   color: var(--color-highlight);
-  font-size: clamp(1.5rem, 6vw + 1rem, 6rem); 
+  font-size: clamp(1.5rem, 6vw + 1rem, 6rem);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-tight);
   letter-spacing: -0.045em;
@@ -20,32 +34,50 @@
 
 .hero-description {
   color: var(--color-text);
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-base);
   font-family: var(--font-body);
   font-weight: var(--font-weight-regular);
+  margin-top: 1.5rem;          
+  max-width: 56rem;             
+  padding-left: 0;       
+}
+@media (min-width: 40rem) { 
+  .hero-description { padding-left: 1.5rem; }
+}
+@media (min-width: 48rem) { 
+  .hero-description { padding-left: 3rem; }
+}
+
+/* CTA + socials */
+.hero-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 40rem) {
+  .hero-bottom { flex-direction: row; }
+}
+
+.hero-socials { display: none; }
+@media (min-width: 40rem) {
+  .hero-socials { display: flex; align-items: center; gap: 1.5rem; }
 }
 
 .hero-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   color: var(--color-primary);
   text-decoration: none;
   font-family: var(--font-body);
-  min-height: 44px
+  min-height: 44px;
 }
+.hero-link:hover { color: var(--color-highlight); }
 
-.hero-link:hover {
-  color: var(--color-highlight);
-}
-
-.hero-bottom {
-  padding-bottom: 3rem;
-}
-
-/* Small (40rem) and up */
 @media (min-width: 40rem) {
-  .hero-description {
-    font-size: var(--font-size-lg);
-  }
+  .hero-description { font-size: var(--font-size-lg); }
 }
