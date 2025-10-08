@@ -1,21 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Breadcrumb.css";
 
 const Breadcrumb = ({ items }) => (
-  <nav aria-label="Breadcrumb">
-    <ol className="flex flex-wrap text-sm">
+  <nav className="breadcrumb" aria-label="Breadcrumb">
+    <ol className="breadcrumb__list" role="list">
       {items.map((item, index) => {
         const isLast = index === items.length - 1;
         return (
-          <li key={index} className="flex items-center">
+          <li key={index} className="breadcrumb__item">
             {isLast ? (
-              <span aria-current="page">{item.label}</span>
+              <span className="breadcrumb__current" aria-current="page">
+                {item.label}
+              </span>
             ) : (
-              <Link to={item.to} className="hover:underline">
+              <Link to={item.to} className="breadcrumb__link">
                 {item.label}
               </Link>
             )}
-            {!isLast && <span className="mx-2" aria-hidden="true">›</span>}
+            {!isLast && (
+              <span className="breadcrumb__sep" aria-hidden="true">›</span>
+            )}
           </li>
         );
       })}
