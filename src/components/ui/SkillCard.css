@@ -1,34 +1,28 @@
-/* ==== MOBILE-FIRST (phones & tablets) ==== */
-
 .skill-card-wrapper {
   position: relative;
   width: 100%;
-  /* full width on mobile/tablet */
   min-width: 0;
-  /* allow shrinking inside flex */
   max-width: none;
-  /* remove previous cap */
   border: 1px solid var(--color-primary);
   padding: 1.5rem;
   overflow: hidden;
   background-color: var(--color-accent);
   transition: transform 0.3s ease, background 0.3s ease;
   z-index: 0;
+  will-change: transform;
 }
 
-/* Accent overlay (stays off-screen unless hovered on large screens) */
+
 .skill-card-wrapper::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  bottom: 0; left: 0;
+  height: 100%; width: 100%;
   background-color: var(--color-accent);
   transform: translateY(100%);
-  /* hidden by default; will animate on lg:hover */
   transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
   z-index: 1;
+  pointer-events: none;
 }
 
 .skill-card {
@@ -42,6 +36,7 @@
   margin-bottom: 1rem;
   transition: transform 0.5s ease, opacity 0.6s ease;
 }
+.skill-icon svg { width: 1em; height: 1em; }
 
 .skill-card-title {
   font-size: var(--font-size-h4);
@@ -74,16 +69,18 @@
   display: inline-block;
 }
 
+/* CTA link */
 .projects-link-wrapper {
-  /* Visible by default on mobile/tablet (no hover on touch) */
   transform: none;
   transition: transform 0.5s ease;
   margin-bottom: 0;
   margin-top: 1rem;
   transition-delay: 0.12s;
 }
-
 .projects-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
@@ -91,39 +88,21 @@
   letter-spacing: 0.125em;
 }
 
-/* Remove the desktop-only stagger on mobile/tablet */
+/* mobile/tablet spacing rules */
 .skill-card-wrapper:nth-child(1),
 .skill-card-wrapper:nth-child(2),
-.skill-card-wrapper:nth-child(3) {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+.skill-card-wrapper:nth-child(3) { margin-top: 0; margin-bottom: 0; }
 
-/* Hide projects link on cards 2 & 3 */
+/* hide CTA on cards 2 & 3 */
 .skill-card-wrapper:nth-child(2) .projects-link-wrapper,
-.skill-card-wrapper:nth-child(3) .projects-link-wrapper {
-  display: none;
-}
+.skill-card-wrapper:nth-child(3) .projects-link-wrapper { display: none; }
 
-
-/* Small (sm) — 640px (40rem) and up */
+/* sm */
 @media (min-width: 40rem) {
-  .projects-link {
-    font-size: var(--font-size-sm);
-  }
+  .projects-link { font-size: var(--font-size-sm); }
 }
 
-/* Medium (md) — 768px (48rem) and up */
-@media (min-width: 48rem) {
-  /* your overrides here */
-}
-
-/* Large (lg) — 1024px (64rem) and up */
-@media (min-width: 64rem) {
-  /* your overrides here */
-}
-
-/* Extra Large (xl) — 1280px (80rem) and up */
+/* xl — 1280px */
 @media (min-width: 80rem) {
   .skill-card-wrapper {
     background-color: var(--color-bg);
@@ -132,54 +111,47 @@
     max-width: 340px;
   }
 
-  /* Hover Effects only on large screens */
-  .skill-card-wrapper:hover {
-    transform: translateX(3px) skewX(-5deg) scaleX(0.95) scaleY(0.95);
+  /* Hover/Focus state
+
+  .skill-card-wrapper:hover,
+  .skill-card-wrapper:focus-within {
+    transform: translateX(3px) skewX(-5deg) scale(0.95);
   }
 
-  .skill-card-wrapper:hover::before {
+  .skill-card-wrapper:hover::before,
+  .skill-card-wrapper:focus-within::before {
     transform: translateY(0%);
   }
 
-  .skill-card-wrapper:hover .skill-icon {
+  .skill-card-wrapper:hover .skill-icon,
+  .skill-card-wrapper:focus-within .skill-icon {
     transform: translateY(-70px);
     opacity: 0;
   }
 
-  .skill-card-wrapper:hover .skill-card-title {
+  .skill-card-wrapper:hover .skill-card-title,
+  .skill-card-wrapper:focus-within .skill-card-title {
     transform: translateY(-50px);
   }
 
-  .skill-card-wrapper:hover .skill-list {
+  .skill-card-wrapper:hover .skill-list,
+  .skill-card-wrapper:focus-within .skill-list {
     transform: translateY(-45px);
   }
 
-  /* On large screens, hide the projects link until hover */
+  /* Hide CTA until interaction */
   .projects-link-wrapper {
     margin-top: 0;
     margin-bottom: 1rem;
     transform: translateY(60px);
   }
-
-  .skill-card-wrapper:hover .projects-link-wrapper {
-    transform: translateY(0px);
+  .skill-card-wrapper:hover .projects-link-wrapper,
+  .skill-card-wrapper:focus-within .projects-link-wrapper {
+    transform: translateY(0);
   }
 
-  /* Restore your staggered offsets for desktop */
-  .skill-card-wrapper:nth-child(1) {
-    margin-bottom: 2rem;
-  }
-
-  .skill-card-wrapper:nth-child(2) {
-    margin-top: 2rem;
-  }
-
-  .skill-card-wrapper:nth-child(3) {
-    margin-bottom: 2rem;
-  }
-}
-
-/* 2X Large (2xl) — 1536px (96rem) and up */
-@media (min-width: 96rem) {
-  /* your overrides here */
+  /* desktop stagger */
+  .skill-card-wrapper:nth-child(1) { margin-bottom: 2rem; }
+  .skill-card-wrapper:nth-child(2) { margin-top: 2rem; }
+  .skill-card-wrapper:nth-child(3) { margin-bottom: 2rem; }
 }
