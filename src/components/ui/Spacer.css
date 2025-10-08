@@ -1,0 +1,7 @@
+.spacer { display: block; width: 100%; }
+.spacer--xs  { height: 0.5rem; }
+.spacer--sm  { height: 1rem; }
+.spacer--md  { height: 2rem; }
+.spacer--lg  { height: 3rem; }
+.spacer--xl  { height: 4rem; }
+.spacer--xxl { height: 6rem; }

@@ -1,20 +1,20 @@
-import { useDebugValue } from 'react';
+import PropTypes from "prop-types";
+import "./Spacer.css";
 
-const Spacer = ({ size = "md" }) => {
-  const sizes = {
-    xs: "h-2",
-    sm: "h-4",
-    md: "h-8",
-    lg: "h-12",
-    xl: "h-16",
-    xxl:"h-24",
-  };
-
-  return <div className={sizes[size] || sizes["md"]} />;
+const SIZE_CLASS = {
+  xs: "spacer--xs",   // 0.5rem (was h-2)
+  sm: "spacer--sm",   // 1rem   (was h-4)
+  md: "spacer--md",   // 2rem   (was h-8)
+  lg: "spacer--lg",   // 3rem   (was h-12)
+  xl: "spacer--xl",   // 4rem   (was h-16)
+  xxl:"spacer--xxl",  // 6rem   (was h-24)
 };
 
-export default Spacer;
+export default function Spacer({ size = "md" }) {
+  const mod = SIZE_CLASS[size] || SIZE_CLASS.md;
+  return <div className={`spacer ${mod}`} aria-hidden="true" />;
+}
 
-// Example usage
-
-{/* <Spacer size="lg" /> */}
+Spacer.propTypes = {
+  size: PropTypes.oneOf(["xs", "sm", "md", "lg", "xl", "xxl"]),
+};
