@@ -1,11 +1,11 @@
-.icon-list {
-  list-style-type: none;
+/* Component: SingleIconList */
+.c-iconlist {
+  list-style: none;
   padding: 0;
-  margin: 0;
-  margin-bottom: 3rem;
+  margin: 0 0 3rem 0;
 }
 
-.icon-list-item {
+.c-iconlist__item {
   display: flex;
   align-items: center;
   font-size: inherit;
@@ -14,52 +14,25 @@
   position: relative;
 }
 
-.icon-list-icon {
-  margin-right: 0.75rem;
+.c-iconlist__icon {
   display: flex;
   align-items: center;
+  margin-right: 0.75rem;
 }
 
-.icon-circle {
+.c-iconlist__bullet {
   width: 0.75rem;
   height: 0.75rem;
   fill: var(--color-primary);
 }
 
-.icon-list-text {
+.c-iconlist__text {
   color: var(--color-primary);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-medium);
   letter-spacing: var(--letter-spacing-normal);
   text-transform: uppercase;
-  margin: 0px;
-  padding: 0px;
-}
-
-/* Tailwind CSS breakpoints (min-width) */
-
-/* Small (sm) — 640px (40rem) and up */
-@media (min-width: 40rem) {
-  /* your overrides here */
-}
-
-/* Medium (md) — 768px (48rem) and up */
-@media (min-width: 48rem) {
-  /* your overrides here */
-}
-
-/* Large (lg) — 1024px (64rem) and up */
-@media (min-width: 64rem) {
-  /* your overrides here */
-}
-
-/* Extra Large (xl) — 1280px (80rem) and up */
-@media (min-width: 80rem) {
-  /* your overrides here */
-}
-
-/* 2X Large (2xl) — 1536px (96rem) and up */
-@media (min-width: 96rem) {
-  /* your overrides here */
+  margin: 0;
+  padding: 0;
 }
 
