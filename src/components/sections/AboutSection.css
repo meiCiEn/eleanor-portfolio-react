@@ -5,13 +5,16 @@
 .about-content {
   display: flex;
   flex-direction: column-reverse;
-  align-items: flex-start;
+  align-items: center; /*flex-start*/
   justify-content: space-between;
   gap: 2.5rem;
 }
 
 @media (min-width: 48rem) {
-  .about-content { flex-direction: row; }
+  .about-content { 
+    flex-direction: row;
+    align-items: flex-start;
+   }
 }
 
 /* Columns */
@@ -30,6 +33,31 @@
 .about-media {
   position: relative;
   display: flex;
+  padding-inline: 1rem;         /* small breathing room on mobile */
+  justify-content: center;      /* already true, but explicit */
+}
+
+.about-portrait {
+  display: block;
+  width: clamp(220px, 60vw, 420px);  /* ~60% viewport width, sane min/max */
+  max-height: 70vh;                  /* avoid towering images on short screens */
+  height: auto;
+  margin-inline: auto;               /* center the image */
+  object-fit: cover;
+}
+
+/* --- Scale up at your existing breakpoints --- */
+@media (min-width: 48rem) {
+  .about-media { padding-inline: 0; } /* remove the mobile padding */
+  .about-portrait {
+    width: 100%;       /* fill its column on larger screens */
+    max-height: none;  /* let it grow naturally */
+  }
+}
+
+/* .about-media {
+  position: relative;
+  display: flex;
   justify-content: center;
 }
 @media (min-width: 48rem) {
@@ -42,7 +70,7 @@
   height: auto;
   object-fit: cover;
   border-radius: var(--radius-md);
-}
+} */
 
 .about-iconrow { display: flex; }
 
