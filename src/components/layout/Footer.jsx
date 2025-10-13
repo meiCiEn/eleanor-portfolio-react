@@ -1,5 +1,5 @@
 import logo from "../../assets/images/logos/e-logo-light.png";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
@@ -51,6 +51,16 @@ export default function Footer() {
                   aria-label="Visit Eleanor Mears’s LinkedIn profile"
                 >
                   <FaLinkedin size={18} aria-hidden="true" focusable="false" /> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ellie_makes_websites/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit Eleanor Mears’s Instagram profile"
+                >
+                  <FaInstagram size={18} aria-hidden="true" focusable="false" /> Instagram
                 </a>
               </li>
             </ul>

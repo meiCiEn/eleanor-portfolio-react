@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import LinkButton from "../ui/LinkButton";
 import "./HeroSection.css";
 
@@ -49,6 +49,15 @@ const HeroSection = ({ headerHeight }) => {
             aria-label="Visit Eleanor Mears’s LinkedIn profile"
           >
             <FaLinkedin size={18} aria-hidden="true" /> LinkedIn
+          </a>
+          <a
+            href="https://www.instagram.com/ellie_makes_websites/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-link"
+            aria-label="Visit Eleanor Mears’s Instagram profile"
+          >
+            <FaInstagram size={18} aria-hidden="true" /> Instagram
           </a>
         </div>
       </div>
