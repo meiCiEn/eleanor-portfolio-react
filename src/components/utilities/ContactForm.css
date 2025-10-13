@@ -20,8 +20,8 @@
 .cf-actions {
   display: flex;
   justify-content: center;
-  margin-bottom: 1rem; /* mb-4 */
+  margin-bottom: 1rem; 
 }
-@media (min-width: 40rem) { /* sm */
+@media (min-width: 40rem) {
   .cf-actions { justify-content: flex-start; }
 }
