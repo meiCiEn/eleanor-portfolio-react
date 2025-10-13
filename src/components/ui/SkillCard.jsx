@@ -22,7 +22,7 @@ const SkillCard = ({ title, icon: Icon, items }) => {
 
         <div className="projects-link-wrapper">
           <a
-            href="#"
+            href="#projects"
             className="projects-link"
             aria-label="See projects I have worked on"
           >

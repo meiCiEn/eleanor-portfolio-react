@@ -1,7 +1,7 @@
 import "./ContactSection.css";
 import ContactForm from "../utilities/ContactForm.jsx";
 import Spacer from "../ui/Spacer.jsx";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import atomiumImage from "../../assets/images/atomium.jpg";
 
 export default function ContactSection() {
@@ -27,7 +27,7 @@ export default function ContactSection() {
 
               <div className="contact-label">Email</div>
               <a
-                href="mailto:info@eleanor-mears.com"
+                href="mailto:info@eleanor-mears.com" target="_blank"
                 className="contact-link contact-link--spaced"
               >
                 info@eleanor-mears.com
@@ -59,6 +59,15 @@ export default function ContactSection() {
                   aria-label="Visit Eleanor Mears’s LinkedIn profile"
                 >
                   <FaLinkedin aria-hidden="true" />
+                </a>
+                <a
+                  href="https://www.instagram.com/ellie_makes_websites/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hero-link"
+                  aria-label="Visit Eleanor Mears’s Instagram profile"
+                >
+                  <FaInstagram aria-hidden="true" />
                 </a>
               </div>
             </div>

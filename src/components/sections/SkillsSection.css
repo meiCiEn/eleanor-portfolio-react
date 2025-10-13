@@ -12,6 +12,14 @@
   gap: 2rem; 
   margin-top: 2.5rem;
 }
+
+.skills-list > .skills-item:nth-child(2) .projects-link-wrapper {
+  display: none;
+}
+.skills-list > .skills-item:nth-child(3) .projects-link-wrapper {
+  display: none;
+}
+
 @media (min-width: 48rem) { 
   .skills-list { flex-direction: row; }
 }

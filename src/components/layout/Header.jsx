@@ -99,10 +99,10 @@ export default function Header({ setHeaderHeight }) {
 
           <div className="o-flex o-flex--col u-items-end u-text-right u-gap-2">
             <div>
-              <a href="mailto:info@eleanor-mears.com" className="contact-email">info@eleanor-mears.com</a>
+              <a href="mailto:info@eleanor-mears.com" className="contact-email" target="_blank">info@eleanor-mears.com</a>
               <p className="contact-phone"><a href="tel:+32467662544">(+32) 467 66 25 44</a></p>
             </div>
-            <a href="#contact" className="c-button">Let&apos;s talk</a>
+            <Link to="/#contact" className="c-button" aria-current={hash === "#contact" ? "true" : undefined}>Let&apos;s talk</Link>
           </div>
         </div>
 
