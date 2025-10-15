@@ -1,4 +1,5 @@
 import React from "react";
+import Seo from "../components/utilities/Seo";
 import { projects } from "../data/projectsData";
 import ProjectCard from "../components/ui/ProjectCard";
 import Spacer from "../components/ui/Spacer";
@@ -12,6 +13,12 @@ const ProjectsOverview = () => {
   ];
 
   return (
+    <>
+      <Seo
+        title="Projects — Eleanor Mears"
+        description="Selected frontend projects — interfaces, accessibility, and React/Vite builds."
+        path="/projects"
+      />
     <main id="main" tabIndex="-1" className="o-section o-container-wide">
       <div className="o-container-wide po-crumbbar">
         <Breadcrumb items={breadcrumbItems} />
@@ -33,6 +40,7 @@ const ProjectsOverview = () => {
         </ul>
       </section>
     </main>
+    </>
   );
 };
 

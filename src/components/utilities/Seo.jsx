@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import siteMeta from "@/data/siteMeta";
+import siteMeta from "../../data/siteMeta";
 
 /**
  * Usage:
@@ -7,7 +7,7 @@ import siteMeta from "@/data/siteMeta";
  * - title, description: per-page overrides
  * - path: appended to your siteUrl to set canonical & og:url (e.g. "/projects")
  */
-export default function Seo({ title, description, path = "" }) {
+export default function Seo({ title, description, image, path = "" }) {
   const {
     siteName,
     defaultTitle,
@@ -18,27 +18,26 @@ export default function Seo({ title, description, path = "" }) {
 
   const finalTitle = title || defaultTitle;
   const finalDesc = description || defaultDescription;
-  const url = `${siteUrl.replace(/\/$/, "")}${path || "/"}`;
+const toAbs = (u) =>
+  /^https?:\/\//.test(u) ? u : `${siteUrl.replace(/\/$/, "")}/${String(u).replace(/^\//, "")}`;
+
+const url        = toAbs(path || "/");
+const finalImage = toAbs(image || ogImage);
 
   useEffect(() => {
-    // <title>
     document.title = finalTitle;
-
-    // <meta name="description">
     setMeta("name", "description", finalDesc);
-
-    // <link rel="canonical">
     setLink("canonical", url);
 
-    // Optionally refresh a few OG/Twitter tags for browsers (won't affect most social scrapers)
     setMeta("property", "og:title", finalTitle);
     setMeta("property", "og:description", finalDesc);
     setMeta("property", "og:url", url);
-    setMeta("property", "og:image", ogImage);
+    setMeta("property", "og:image", finalImage);
+
     setMeta("name", "twitter:title", finalTitle);
     setMeta("name", "twitter:description", finalDesc);
-    setMeta("name", "twitter:image", ogImage);
-  }, [finalTitle, finalDesc, url, ogImage]);
+    setMeta("name", "twitter:image", finalImage);
+  }, [finalTitle, finalDesc, url, finalImage]);
 
   return null;
 }
