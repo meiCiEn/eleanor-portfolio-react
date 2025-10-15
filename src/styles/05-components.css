@@ -55,3 +55,4 @@ input[type="submit"]:hover { background-color: var(--color-primary); color: var(
 @media (min-width: 64rem) {
   .button, input[type="button"], input[type="submit"] { padding: 5px 22px; }
 }
+

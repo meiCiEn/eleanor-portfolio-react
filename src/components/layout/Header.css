@@ -124,6 +124,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
+  border: none;
 }
 .overlay-close:hover { color: var(--color-white); }
 

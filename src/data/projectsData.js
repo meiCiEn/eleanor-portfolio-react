@@ -82,6 +82,10 @@ export const projects = [
         "A structured design system showing a cohesive colour palette, typography, text styles, and UI components for consistent web design.",
       linkText: "design system", // the underlined word(s)
     },
+    seoTitle: "Design System — Eleanor Mears",
+    seoDescription: "Reusable design system with typography, colour palette and UI components. Built with responsive CSS Grid/Flexbox.",
+    ogImage: designSystemDesktop,
+    
   },
   {
     title: "CSS Cheat Sheet",
@@ -110,6 +114,9 @@ export const projects = [
       linkText: "CSS cheat sheet",
 
     },
+    seoTitle: "CSS Cheat Sheet — Eleanor Mears",
+    seoDescription: "Quick reference of CSS selectors and specificity with examples. Clean layout for faster styling decisions.",
+    ogImage: cssDesktop,
   },
   {
     title: "ACT Alliance EU",
@@ -144,6 +151,9 @@ export const projects = [
       linkText: "ACT Alliance EU",
 
     },
+    seoTitle: "ACT Alliance EU website — Eleanor Mears",
+    seoDescription: "Accessible WordPress site with resource library, filters and clearer IA for an EU NGO network.",
+    ogImage: actHomepage,
   },
   {
     title: "Community Kitchen",
@@ -174,6 +184,9 @@ export const projects = [
       linkText: "Community Kitchen",
 
     },
+    seoTitle: "Community Kitchen website — Eleanor Mears",
+    seoDescription: "Charity site to boost donations and visibility. WordPress build with news, recipes and events.",
+    ogImage: ckHomepage,
   },
   {
     title: "Reactology",
@@ -204,6 +217,9 @@ export const projects = [
       linkText: "Reactology",
 
     },
+    seoTitle: "Reactology — React mini-apps by Eleanor Mears",
+    seoDescription: "A playground of React projects—timer, calculator, memory game and more. Built with React.",
+    ogImage: reactologyMemory,
   },
   {
     title: "JavaScript",
@@ -233,6 +249,9 @@ export const projects = [
       linkText: "notes on a variety of JavaScript topics",
 
     },
+    seoTitle: "JavaScript notes & exercises — Eleanor Mears",
+    seoDescription: "Personal JS notes and practice—loops, operators, DOM, plus exercises with code and a glossary.",
+    ogImage: jsConversation,
   },
   {
     title: "Webflow Portfolio",
@@ -258,6 +277,9 @@ export const projects = [
       text:
         "I created this fully responsive portfolio page using the 'no-code' platform Webflow, inspired by Sandy Ludosky's LinkedIn course. The design is colourful, clean and easy-to-navigate.",
     },
+    seoTitle: "Webflow Portfolio — Eleanor Mears",
+    seoDescription: "One-page portfolio built in Webflow—colourful, responsive and easy to navigate.",
+    ogImage: webflowThumbnail,
   },
   {
     title: "Molenbeek en Promenade",
@@ -286,6 +308,9 @@ export const projects = [
       text:
         "A district bursting with life and colour, Molenbeek has too often been ignored or maligned. Molenbeek en Promenade aims to change all that by putting Brussels 1080 back on the map.",
     },
+    seoTitle: "Molenbeek en Promenade — Eleanor Mears",
+    seoDescription: "Self-guided walking/cycling tours highlighting Molenbeek’s culture, history and green spaces.",
+    ogImage: molenbeekHomepage,
   },
   {
     title: "Maison de l'Écologie",
@@ -311,6 +336,9 @@ export const projects = [
       text:
         "I created a new homepage and navigation menu for the Maison de l’Écologie in Namur.",
     },
+    seoTitle: "Maison de l’Écologie — homepage redesign",
+    seoDescription: "Homepage and navigation redesign for a Namur non-profit—news and events made clearer in WordPress.",
+    ogImage: maisonThumbnail,
   },
   {
     title: "Belgium Women Together",
@@ -337,6 +365,9 @@ export const projects = [
       text:
         "Belgium Women Together is a microsite created especially to advertise a religious retreat aimed at women from English-speaking churches across Benelux.",
     },
+    seoTitle: "Belgium Women Together — event microsite",
+    seoDescription: "Mobile-first event microsite with schedule, speaker and signup for a Benelux women’s retreat.",
+    ogImage: bwtMobile,
   },
   {
     title: "Boulangerie",
@@ -366,6 +397,9 @@ export const projects = [
       text:
         "During Covid lockdown I learnt to bake sourdough bread and loved it. So I decided to create the website for a (pretend) bakery as my first project at Interface3.",
     },
+    seoTitle: "Boulangerie Eleanor — demo site",
+    seoDescription: "First project: a small bakery website with home, about, contact and orders—HTML/CSS/JS.",
+    ogImage: boulangerieHero,
   },
 ];
 
