@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
-import Logo from "../../assets/images/logos/e-logo-dark.png";
+import Logo from "../../assets/images/logos/e-logo-dark.webp";
 import "./Header.css";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";

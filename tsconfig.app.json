@@ -12,8 +12,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "skipLibCheck": true,
-    "allowJs": true,        // lets you migrate gradually from .js/.jsx
-    "checkJs": false,       // set true if you want JS to be type-checked
+    "allowJs": true,        
+    "checkJs": false,      
     "resolveJsonModule": true,     // helpful for your i18n/*.json imports
     "types": ["vite/client"],
 

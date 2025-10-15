@@ -2,7 +2,7 @@ import "./ContactSection.css";
 import ContactForm from "../utilities/ContactForm.jsx";
 import Spacer from "../ui/Spacer.jsx";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import atomiumImage from "../../assets/images/atomium.jpg";
+import atomiumImage from "../../assets/images/photos/atomium.webp";
 
 export default function ContactSection() {
   return (

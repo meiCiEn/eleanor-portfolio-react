@@ -1,61 +1,59 @@
 // Act Alliance EU
-
-import actHomepage from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_homepage.png";
-import actStaff from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_staff.png";
-import actContact from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_contact.png";
-import actResource from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_resource.png";
-import actTopic from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_topic.png";
-import actTopics from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_topics.png";
-import actResources from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_resources.png";
-import designSystemDesktop from "../assets/images/websiteScreenshots/design-system/design-system_desktop.png";
-import designSystemMobile from "../assets/images/websiteScreenshots/design-system/design-system_mobile.png";
+import actHomepage from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_homepage.webp";
+import actStaff from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_staff.webp";
+import actContact from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_contact.webp";
+import actResource from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_resource.webp";
+import actTopic from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_topic.webp";
+import actTopics from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_topics.webp";
+import actResources from "../assets/images/websiteScreenshots/act-alliance-eu/act-alliance-eu_resources.webp";
+import designSystemDesktop from "../assets/images/websiteScreenshots/design-system/design-system_desktop.webp";
+import designSystemMobile from "../assets/images/websiteScreenshots/design-system/design-system_mobile.webp";
 
 // Belgium Women Together
-import bwtHomepage from "../assets/images/websiteScreenshots/belgium-women-together/belgium-women-together_homepage.png";
-import bwtMobile from "../assets/images/websiteScreenshots/belgium-women-together/belgium-women-together_mobile.png";
+import bwtHomepage from "../assets/images/websiteScreenshots/belgium-women-together/belgium-women-together_homepage.webp";
+import bwtMobile from "../assets/images/websiteScreenshots/belgium-women-together/belgium-women-together_mobile.webp";
 
 // Boulangerie
-import boulangerieAbout from "../assets/images/websiteScreenshots/boulangerie/boulangerie_about.png";
-import boulangerieContact from "../assets/images/websiteScreenshots/boulangerie/boulangerie_contact-page.png";
-import boulangerieHero from "../assets/images/websiteScreenshots/boulangerie/boulangerie_hero-banner.png";
-import boulangerieMobile from "../assets/images/websiteScreenshots/boulangerie/boulangerie_mobile-version.png";
-import boulangerieOrder from "../assets/images/websiteScreenshots/boulangerie/boulangerie_order-page.png";
+import boulangerieAbout from "../assets/images/websiteScreenshots/boulangerie/boulangerie_about.webp";
+import boulangerieContact from "../assets/images/websiteScreenshots/boulangerie/boulangerie_contact-page.webp";
+import boulangerieHero from "../assets/images/websiteScreenshots/boulangerie/boulangerie_hero-banner.webp";
+import boulangerieMobile from "../assets/images/websiteScreenshots/boulangerie/boulangerie_mobile-version.webp";
+import boulangerieOrder from "../assets/images/websiteScreenshots/boulangerie/boulangerie_order-page.webp";
 
 // Community Kitchen
-import ckDonations from "../assets/images/websiteScreenshots/community-kitchen/community-kitchen_donations.png";
-import ckHomepage from "../assets/images/websiteScreenshots/community-kitchen/community-kitchen_homepage.png";
-import ckNews from "../assets/images/websiteScreenshots/community-kitchen/community-kitchen_news-and-events.png";
-import ckRecipes from "../assets/images/websiteScreenshots/community-kitchen/community-kitchen_recipes.png";
+import ckDonations from "../assets/images/websiteScreenshots/community-kitchen/community-kitchen_donations.webp";
+import ckHomepage from "../assets/images/websiteScreenshots/community-kitchen/community-kitchen_homepage.webp";
+import ckNews from "../assets/images/websiteScreenshots/community-kitchen/community-kitchen_news-and-events.webp";
+import ckRecipes from "../assets/images/websiteScreenshots/community-kitchen/community-kitchen_recipes.webp";
 
 // CSS Cheat Sheet
-import cssDesktop from "../assets/images/websiteScreenshots/css-cheat-sheet/css-cheat-sheet_desktop.png";
-import cssMobile from "../assets/images/websiteScreenshots/css-cheat-sheet/css-cheat-sheet_mobile.png";
+import cssDesktop from "../assets/images/websiteScreenshots/css-cheat-sheet/css-cheat-sheet_desktop.webp";
+import cssMobile from "../assets/images/websiteScreenshots/css-cheat-sheet/css-cheat-sheet_mobile.webp";
 
 // JavaScript
-import jsConversation from "../assets/images/websiteScreenshots/javascript/javascript_conversation-generator.png";
-import jsDates from "../assets/images/websiteScreenshots/javascript/javascript_dates.png";
-import jsOperators from "../assets/images/websiteScreenshots/javascript/javascript_operators.png";
+import jsConversation from "../assets/images/websiteScreenshots/javascript/javascript_conversation-generator.webp";
+import jsDates from "../assets/images/websiteScreenshots/javascript/javascript_dates.webp";
+import jsOperators from "../assets/images/websiteScreenshots/javascript/javascript_operators.webp";
 
 // Maison de l'Écologie
-import maisonHomepage from "../assets/images/websiteScreenshots/maison-de-lecologie/maison-de-lecologie_homepage.png";
-import maisonThumbnail from "../assets/images/websiteScreenshots/maison-de-lecologie/maison-de-lecologie_thumbnail.png";
+import maisonHomepage from "../assets/images/websiteScreenshots/maison-de-lecologie/maison-de-lecologie_homepage.webp";
+import maisonThumbnail from "../assets/images/websiteScreenshots/maison-de-lecologie/maison-de-lecologie_thumbnail.webp";
 
 // Molenbeek en Promenade
-import molenbeekCycle from "../assets/images/websiteScreenshots/molenbeek-en-promenade/molenbeek-en-promenade_cycle-route.png";
-import molenbeekHomepage from "../assets/images/websiteScreenshots/molenbeek-en-promenade/molenbeek-en-promenade_homepage.png";
-import molenbeekMobile from "../assets/images/websiteScreenshots/molenbeek-en-promenade/molenbeek-en-promenade_mobile-version.png";
-import molenbeekSignup from "../assets/images/websiteScreenshots/molenbeek-en-promenade/molenbeek-en-promenade_sign-up-page.png";
+import molenbeekCycle from "../assets/images/websiteScreenshots/molenbeek-en-promenade/molenbeek-en-promenade_cycle-route.webp";
+import molenbeekHomepage from "../assets/images/websiteScreenshots/molenbeek-en-promenade/molenbeek-en-promenade_homepage.webp";
+import molenbeekMobile from "../assets/images/websiteScreenshots/molenbeek-en-promenade/molenbeek-en-promenade_mobile-version.webp";
+import molenbeekSignup from "../assets/images/websiteScreenshots/molenbeek-en-promenade/molenbeek-en-promenade_sign-up-page.webp";
 
 // Reactology
-import reactologyCalc from "../assets/images/websiteScreenshots/reactology/reactology_calculator.png";
-import reactologyHomepage from "../assets/images/websiteScreenshots/reactology/reactology_homepage.png";
-import reactologyMemory from "../assets/images/websiteScreenshots/reactology/reactology_memory-game.png";
-import reactologyTimer from "../assets/images/websiteScreenshots/reactology/reactology_timer.png";
+import reactologyCalc from "../assets/images/websiteScreenshots/reactology/reactology_calculator.webp";
+import reactologyHomepage from "../assets/images/websiteScreenshots/reactology/reactology_homepage.webp";
+import reactologyMemory from "../assets/images/websiteScreenshots/reactology/reactology_memory-game.webp";
+import reactologyTimer from "../assets/images/websiteScreenshots/reactology/reactology_timer.webp";
 
 // Webflow Portfolio
-import webflowHomepage from "../assets/images/websiteScreenshots/webflow-portfolio/webflow-portfolio_homepage.png";
-import webflowThumbnail from "../assets/images/websiteScreenshots/webflow-portfolio/webflow-portfolio_thumbnail.png";
-
+import webflowHomepage from "../assets/images/websiteScreenshots/webflow-portfolio/webflow-portfolio_homepage.webp";
+import webflowThumbnail from "../assets/images/websiteScreenshots/webflow-portfolio/webflow-portfolio_thumbnail.webp";
 
 
 export const projects = [

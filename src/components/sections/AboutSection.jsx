@@ -3,7 +3,7 @@ import SingleIconList from "../ui/SingleIconList";
 import LinkButton from "../ui/LinkButton";
 import Spacer from "../ui/Spacer";
 import "./AboutSection.css";
-import portrait from "../../assets/images/photos/eleanor-mears_profile_bw.png";
+import portrait from "../../assets/images/photos/eleanor-mears_profile_bw.webp";
 
 const AboutSection = ({ headerHeight }) => {
   const aboutSectionMinHeight = `calc(100vh - ${headerHeight}px)`;

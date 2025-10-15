@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logos/e-logo-light.png";
+import logo from "../../assets/images/logos/e-logo-light.webp";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Footer.css";
