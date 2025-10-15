@@ -74,7 +74,7 @@ export default function Footer() {
         <div className="u-mt-10 o-grid o-grid--cols-1 o-grid--12-at-md o-grid--gap-6 u-text-sm">
           <address className="u-not-italic md:u-col-span-4">
             <p className="footer-label">Email</p>
-            <a href="mailto:info@eleanor-mears.com" targe="_blank" className="footer-links o-flex o-flex--center sm:u-justify-start u-break-words">
+            <a href="mailto:info@eleanor-mears.com" target="_blank" className="footer-links o-flex o-flex--center sm:u-justify-start u-break-words">
               info@eleanor-mears.com
             </a>
           </address>

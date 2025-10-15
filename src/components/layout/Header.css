@@ -5,10 +5,10 @@
   top: 0;
   z-index: 40;
   width: 100%;
-  padding-block: 1rem;                /* was py-4 */
+  padding-block: 1rem; 
 }
-@media (min-width: 64rem) {           /* lg */
-  .site-header { padding-block: 1.5rem; }  /* was lg:py-6 */
+@media (min-width: 64rem) { 
+  .site-header { padding-block: 1.5rem; }  
 }
 
 /* Brand (logo sizes) */
@@ -139,19 +139,6 @@
 }
 .mobile-link + .mobile-link { margin-top: 2rem; }
 
-/* =========================================
-   Responsive shells (placeholders)
-   ========================================= */
-
-/* sm — 640px (40rem) */   @media (min-width: 40rem) { /* add overrides if needed */ }
-/* md — 768px (48rem) */   @media (min-width: 48rem) { /* add overrides if needed */ }
-/* lg — 1024px (64rem) */  @media (min-width: 64rem) { /* add overrides if needed */ }
-/* xl — 1280px (80rem) */  @media (min-width: 80rem) { /* add overrides if needed */ }
-/* 2xl — 1536px (96rem) */ @media (min-width: 96rem) { /* add overrides if needed */ }
-
-/* =========================================
-   Accessibility: Reduced Motion
-   ========================================= */
 @media (prefers-reduced-motion: reduce) {
   .overlay-backdrop,
   .overlay-panel,
