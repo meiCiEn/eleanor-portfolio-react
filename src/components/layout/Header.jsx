@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from "react";
+import Logo from "../../assets/images/logos/e-logo-dark.png";
 import "./Header.css";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -81,7 +82,7 @@ export default function Header({ setHeaderHeight }) {
           <div className="o-flex o-flex--start">
             <Link to="/#top" className="brand" aria-label="Go to homepage">
               <img
-                src="/src/assets/images/logos/e-logo-dark.png"
+                src={Logo}
                 alt="Eleanor Mears logo"
                 id="logo-img"
               />
@@ -109,7 +110,7 @@ export default function Header({ setHeaderHeight }) {
         {/* Mobile/Tablet (<lg) */}
         <div className="o-container lg:u-hidden o-flex o-flex--between">
           <Link to="/#top" className="brand brand--sm" aria-label="Go to homepage">
-            <img src="/src/assets/images/logos/e-logo-dark.png" alt="Eleanor Mears logo" id="logo-img" />
+            <img src={Logo} alt="Eleanor Mears logo" id="logo-img" />
           </Link>
 
           <button
