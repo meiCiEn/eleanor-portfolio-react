@@ -2,7 +2,9 @@ import { useRef, useState } from "react";
 import ActionButton from "../ui/ActionButton";
 import "./ContactForm.css";
 
-const ENDPOINT = "https://formspree.io/f/xqkoqqdw";
+const formId = import.meta.env.VITE_FORMSPREE_ID; // see .env file
+const captchaKey = import.meta.env.VITE_HCAPTCHA_SITEKEY;
+const ENDPOINT = `https://formspree.io/f/${formId}`;
 
 export default function ContactForm() {
   const [isSubmitting, setSubmitting] = useState(false);
