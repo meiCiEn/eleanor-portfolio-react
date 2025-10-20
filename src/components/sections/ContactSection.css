@@ -151,7 +151,7 @@
   margin-top: 0.5rem;
 }
 .contact-form .status-message.success { color: lightgreen; }
-.contact-form .status-message.error { color: var(--color-highlight); }
+.contact-form .status-message.error { color: red; }
 
 .contact-form .privacy-note {
   font-size: var(--font-size-sm);
